@@ -1,6 +1,6 @@
 # [에케 노래방 EKE's karaoke](https://vrchat.com/home/launch?worldId=wrld_1cff3558-c6e3-43b1-83ab-d551b48d6d50)
-브챗 [에케 노래방](https://vrchat.com/home/launch?worldId=wrld_1cff3558-c6e3-43b1-83ab-d551b48d6d50) 월드 우동#입니다.
-<br>VRChat [EKE's karaoke](https://vrchat.com/home/launch?worldId=wrld_1cff3558-c6e3-43b1-83ab-d551b48d6d50) World UdonSharp Code.
+브챗 [에케 노래방](https://vrchat.com/home/launch?worldId=wrld_1cff3558-c6e3-43b1-83ab-d551b48d6d50) 월드 관련 소스입니다.
+<br>VRChat [EKE's karaoke](https://vrchat.com/home/launch?worldId=wrld_1cff3558-c6e3-43b1-83ab-d551b48d6d50) World related Code.
 <br>
 <br>모든 유저가 함께 즐기길 바라는 마음으로 개발했습니다.
 <br>I developed it hoping that all users will enjoy it together.
