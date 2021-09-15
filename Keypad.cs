@@ -69,6 +69,7 @@ namespace UdonSharp.Video
 			if (Queue4.text != q4) Queue4.text = q4;
 			if (Queue5.text != qm) Queue5.text = qm;
 			if (vote_text.text != vote.ToString()) vote_text.text = "(" + vote + ")";
+			if (!playing) st = "선곡해주세요! Please choose a song!";
 		}
 
 		#region 노래등록
@@ -7018,6 +7019,7 @@ namespace UdonSharp.Video
 		public Boolean Request(string play_n)
 		{
 			n = play_n; //번호를 현재 재생에 저장
+
 			if (quest == true)
 			{
 				switch (play_n) //번호등록
@@ -13995,6 +13997,7 @@ namespace UdonSharp.Video
 						_input = "Error";
 						return false; //번호가 없으면 false 리턴
 				}
+				Status();
 				return true; //재생 됐으면 true 리턴
 			}
 			else
@@ -20974,10 +20977,31 @@ namespace UdonSharp.Video
 						_input = "Error";
 						return false; //번호가 없으면 false 리턴
 				}
+				Status(play_n);
 				return true; //재생 됐으면 true 리턴
 			}
 		}
 		#endregion
+		
+		public void Status(string play_n)
+        {
+			if (play_n == "0") //노래방 배경이면
+			{
+				playing = false;
+				st = "환영합니다! 에케 노래방입니다. Welcome!";
+			}
+			else if (play_n == "")
+			{
+				playing = true;
+				st = "URL 재생중입니다. Custom URL Playing.";
+			}
+			else
+			{
+				playing = true;
+				st = play_n + " - " + songname(n);
+			}
+			RequestSerialization();
+		}
 
 		public void Enter() //예약 버튼
 		{
@@ -20999,8 +21023,14 @@ namespace UdonSharp.Video
 			{
 				if (Request(_input)) _input = "Play"; //예약된 노래가 재생되면
 			}
-			else if (playing == true) //재생중이고
+			else if (playing == true) //재생중이면
 			{
+				if (songname(_input) == "") //노래 이름 목록에 존재하지 않으면 실패 반환
+				{
+					_input = "Error";
+					return;
+				}
+
 				qq++;
 
 				if (q1 == "") //예약이 비었으면
@@ -21071,7 +21101,7 @@ namespace UdonSharp.Video
 														q10 = _input;
 														_input = "Queue";
 													}
-													else
+													else //예약이 꽉 찼으면
 													{
 														_input = "Full";
 														qq--;
@@ -21126,7 +21156,7 @@ namespace UdonSharp.Video
 				{
 					Reset();
 				}
-				else OnUSharpVideoEnd(); //예약된 목록이 있으면 불러오기
+				else Queue(); //예약된 목록이 있으면 불러오기
 			}
 		}
 
@@ -21153,7 +21183,7 @@ namespace UdonSharp.Video
 		public void OnUSharpVideoError() //영상 오류나면
 		{
 			playing = false;
-			OnUSharpVideoEnd(); //다음 재생목록 실행
+			Queue(); //다음 재생목록 실행
 		}
 
 		public void OnUSharpVideoPause() //영상 일시정지
@@ -21173,26 +21203,10 @@ namespace UdonSharp.Video
 
 		public void OnUSharpVideoLoadStart() //영상 로딩시
 		{
-			if (n == "0") //노래방 배경이면
-			{
-				playing = false;
-				st = "환영합니다! 에케 노래방입니다. Welcome!";
-			}
-			else if (n == "")
-			{
-				playing = true;
-				st = "URL 재생중입니다. Custom URL Playing.";
-			}
-			else
-			{
-				playing = true;
-				st = n + " - " + songname(n);
-			}
-			RequestSerialization();
+			playing = true;
 		}
-		public void OnUSharpVideoEnd() //영상이 끝나면(재생목록 구현)
-		{
-			playing = false;
+		public void Queue()
+        {
 			vote = 3; //넘기기 초기화
 
 			if (q1 != "") //예약된 번호가 있으면
@@ -21214,7 +21228,7 @@ namespace UdonSharp.Video
 
 				if (!Request(n)) //없는 번호라면
 				{
-					OnUSharpVideoEnd(); //다시 실행
+					Queue(); //다시 실행
 					return;
 				}
 			}
@@ -21229,6 +21243,11 @@ namespace UdonSharp.Video
 				qm = "+" + qq;
 			}
 			RequestSerialization(); //Udon 동기화
+		}
+		public void OnUSharpVideoEnd() //영상이 끝나면(재생목록 구현)
+		{
+			playing = false;
+			Queue();
 		}
 
 		public void n_button(int number)

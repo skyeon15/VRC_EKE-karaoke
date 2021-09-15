@@ -138,6 +138,7 @@
 						_input = "Error";
 						return false; //번호가 없으면 false 리턴
 				}
+				Status(play_n);
 				return true; //재생 됐으면 true 리턴
 			}
 			else
@@ -151,6 +152,7 @@
 						_input = "Error";
 						return false; //번호가 없으면 false 리턴
 				}
+				Status(play_n);
 				return true; //재생 됐으면 true 리턴
 			}
 		}</value>
