@@ -43,6 +43,9 @@ namespace UdonSharp.Video
 
 		private void Start()
 		{
+
+			RequestSerialization(); //Udon 동기화
+
 			numberField.text = _input;
 			Status.text = st;
 			Queue1.text = q1;
@@ -55,8 +58,6 @@ namespace UdonSharp.Video
 			_snd = transform.GetComponentInChildren<AudioSource>();
 
 			targetVideoPlayer.RegisterCallbackReceiver(this);
-
-			RequestSerialization(); //Udon 동기화
 		}
 
 		private void Update()
@@ -69,7 +70,6 @@ namespace UdonSharp.Video
 			if (Queue4.text != q4) Queue4.text = q4;
 			if (Queue5.text != qm) Queue5.text = qm;
 			if (vote_text.text != vote.ToString()) vote_text.text = "(" + vote + ")";
-			if (!playing) st = "선곡해주세요! Please choose a song!";
 		}
 
 		#region 노래등록
@@ -892,8 +892,8 @@ namespace UdonSharp.Video
 		VRCUrl q24176 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=_wzJnfvn0xs");
 		VRCUrl n046920 = new VRCUrl("https://www.youtube.com/watch?v=L-2M_-QLs8k");
 		VRCUrl q046920 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=L-2M_-QLs8k");
-		VRCUrl n037603 = new VRCUrl("https://www.youtube.com/watch?v=FLPLgJqeZJw");
-		VRCUrl q037603 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=FLPLgJqeZJw");
+		VRCUrl n037603 = new VRCUrl("https://www.youtube.com/watch?v=FLPLgJqeZJw&t=38");
+		VRCUrl q037603 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=FLPLgJqeZJw&t=38");
 		VRCUrl n011491 = new VRCUrl("https://www.youtube.com/watch?v=57RdgpX8LD8");
 		VRCUrl q011491 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=57RdgpX8LD8");
 		VRCUrl n098528 = new VRCUrl("https://www.youtube.com/watch?v=Xaqpvy-ZbMg");
@@ -1302,8 +1302,8 @@ namespace UdonSharp.Video
 		VRCUrl q038507 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=vIwFbgS3R68");
 		VRCUrl n045527 = new VRCUrl("https://www.youtube.com/watch?v=QE4-OtOOnvo");
 		VRCUrl q045527 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=QE4-OtOOnvo");
-		VRCUrl n089179 = new VRCUrl("https://www.youtube.com/watch?v=GHu39FEFIks");
-		VRCUrl q089179 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=GHu39FEFIks");
+		VRCUrl n089179 = new VRCUrl("https://www.youtube.com/watch?v=GHu39FEFIks&t=52s");
+		VRCUrl q089179 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=GHu39FEFIks&t=52s");
 		VRCUrl n045509 = new VRCUrl("https://www.youtube.com/watch?v=42Gtm4-Ax2U");
 		VRCUrl q045509 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=42Gtm4-Ax2U");
 		VRCUrl n024519 = new VRCUrl("https://www.youtube.com/watch?v=R3Fwdnij49o");
@@ -1710,8 +1710,8 @@ namespace UdonSharp.Video
 		VRCUrl q37717 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=kmdeg4kFdgk");
 		VRCUrl n037717 = new VRCUrl("https://www.youtube.com/watch?v=qCPFK61Yu3M");
 		VRCUrl q037717 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=qCPFK61Yu3M");
-		VRCUrl n01720 = new VRCUrl("https://www.youtube.com/watch?v=cicqW5aGsgA");
-		VRCUrl q01720 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=cicqW5aGsgA");
+		VRCUrl n01720 = new VRCUrl("https://www.youtube.com/watch?v=PAt_a7_VjY4");
+		VRCUrl q01720 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=PAt_a7_VjY4");
 		VRCUrl n77391 = new VRCUrl("https://www.youtube.com/watch?v=V5Hul6WotPk");
 		VRCUrl q77391 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=V5Hul6WotPk");
 		VRCUrl n077391 = new VRCUrl("https://www.youtube.com/watch?v=2Neo6ezwmkE");
@@ -2818,8 +2818,8 @@ namespace UdonSharp.Video
 		VRCUrl q033134 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=lGT6ftrZynY");
 		VRCUrl n97529 = new VRCUrl("https://www.youtube.com/watch?v=DHcSTWSl7BE");
 		VRCUrl q97529 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=DHcSTWSl7BE");
-		VRCUrl n097529 = new VRCUrl("https://www.youtube.com/watch?v=T7JGoDfWJdI");
-		VRCUrl q097529 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=T7JGoDfWJdI");
+		VRCUrl n097529 = new VRCUrl("https://www.youtube.com/watch?v=xc2bW36eVM0&t=14");
+		VRCUrl q097529 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=xc2bW36eVM0&t=14");
 		VRCUrl n76370 = new VRCUrl("https://www.youtube.com/watch?v=VLftM5kAeXg");
 		VRCUrl q76370 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=VLftM5kAeXg");
 		VRCUrl n076370 = new VRCUrl("https://www.youtube.com/watch?v=dvpysZxfDz0");
@@ -3900,8 +3900,8 @@ namespace UdonSharp.Video
 		VRCUrl q026785 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=vT_2Aa9wiZ8");
 		VRCUrl n027357 = new VRCUrl("https://www.youtube.com/watch?v=ImZv56og7vU");
 		VRCUrl q027357 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=ImZv56og7vU");
-		VRCUrl n068414 = new VRCUrl("https://www.youtube.com/watch?v=KdjPwBgtEbk");
-		VRCUrl q068414 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=KdjPwBgtEbk");
+		VRCUrl n068414 = new VRCUrl("https://www.youtube.com/watch?v=bgQIzPnPI88");
+		VRCUrl q068414 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=bgQIzPnPI88");
 		VRCUrl n028688 = new VRCUrl("https://www.youtube.com/watch?v=L1KBaVHAdS8");
 		VRCUrl q028688 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=L1KBaVHAdS8");
 		VRCUrl n027984 = new VRCUrl("https://www.youtube.com/watch?v=xJpZffN0dks");
@@ -3982,8 +3982,8 @@ namespace UdonSharp.Video
 		VRCUrl q028363 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=Mq7SoN4x-BI");
 		VRCUrl n068406 = new VRCUrl("https://www.youtube.com/watch?v=IC3rH7e5hZA");
 		VRCUrl q068406 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=IC3rH7e5hZA");
-		VRCUrl n027965 = new VRCUrl("https://www.youtube.com/watch?v=JJjB5_-kOJY");
-		VRCUrl q027965 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=JJjB5_-kOJY");
+		VRCUrl n027965 = new VRCUrl("https://www.youtube.com/watch?v=XVPKUguQ_6U");
+		VRCUrl q027965 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=XVPKUguQ_6U");
 		VRCUrl n028607 = new VRCUrl("https://www.youtube.com/watch?v=V0REolqif_4");
 		VRCUrl q028607 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=V0REolqif_4");
 		VRCUrl n026944 = new VRCUrl("https://www.youtube.com/watch?v=lCrky7wNn-c");
@@ -4720,6 +4720,346 @@ namespace UdonSharp.Video
 		VRCUrl q15147 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=gfKbAYytTvM");
 		VRCUrl n015147 = new VRCUrl("https://www.youtube.com/watch?v=9EKIsjukG_Q");
 		VRCUrl q015147 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=9EKIsjukG_Q");
+		VRCUrl n16223 = new VRCUrl("https://www.youtube.com/watch?v=5ljdm4X9xog");
+		VRCUrl q16223 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=5ljdm4X9xog");
+		VRCUrl n016223 = new VRCUrl("https://www.youtube.com/watch?v=cNZk2y57jzs");
+		VRCUrl q016223 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=cNZk2y57jzs");
+		VRCUrl n80548 = new VRCUrl("https://www.youtube.com/watch?v=fmiEetlCGtA");
+		VRCUrl q80548 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=fmiEetlCGtA");
+		VRCUrl n080548 = new VRCUrl("https://www.youtube.com/watch?v=LKQ-18LoFQk");
+		VRCUrl q080548 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=LKQ-18LoFQk");
+		VRCUrl n80299 = new VRCUrl("https://www.youtube.com/watch?v=4THtoEWmK6Y");
+		VRCUrl q80299 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=4THtoEWmK6Y");
+		VRCUrl n080299 = new VRCUrl("https://www.youtube.com/watch?v=kkM3aNP3YbQ");
+		VRCUrl q080299 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=kkM3aNP3YbQ");
+		VRCUrl n80469 = new VRCUrl("https://www.youtube.com/watch?v=P4eb3-JdcTM");
+		VRCUrl q80469 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=P4eb3-JdcTM");
+		VRCUrl n080469 = new VRCUrl("https://www.youtube.com/watch?v=tL7HKKEoW1Y");
+		VRCUrl q080469 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=tL7HKKEoW1Y");
+		VRCUrl n80256 = new VRCUrl("https://www.youtube.com/watch?v=sldhAcE-9Xs");
+		VRCUrl q80256 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=sldhAcE-9Xs");
+		VRCUrl n080256 = new VRCUrl("https://www.youtube.com/watch?v=IgPcbE--mMA");
+		VRCUrl q080256 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=IgPcbE--mMA");
+		VRCUrl n80473 = new VRCUrl("https://www.youtube.com/watch?v=cJJQCJXyE7s");
+		VRCUrl q80473 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=cJJQCJXyE7s");
+		VRCUrl n080473 = new VRCUrl("https://www.youtube.com/watch?v=zeI1RXSK1YY");
+		VRCUrl q080473 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=zeI1RXSK1YY");
+		VRCUrl n80527 = new VRCUrl("https://www.youtube.com/watch?v=Y27280om078");
+		VRCUrl q80527 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=Y27280om078");
+		VRCUrl n080527 = new VRCUrl("https://www.youtube.com/watch?v=WPdWvnAAurg");
+		VRCUrl q080527 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=WPdWvnAAurg");
+		VRCUrl n80477 = new VRCUrl("https://www.youtube.com/watch?v=ZhGP7apaEhY");
+		VRCUrl q80477 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=ZhGP7apaEhY");
+		VRCUrl n080477 = new VRCUrl("https://www.youtube.com/watch?v=Me-kzMPK4Qc");
+		VRCUrl q080477 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=Me-kzMPK4Qc");
+		VRCUrl n80716 = new VRCUrl("https://www.youtube.com/watch?v=xGxBzPYPeIA");
+		VRCUrl q80716 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=xGxBzPYPeIA");
+		VRCUrl n080716 = new VRCUrl("https://www.youtube.com/watch?v=tnAxZipkuWw");
+		VRCUrl q080716 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=tnAxZipkuWw");
+		VRCUrl n80684 = new VRCUrl("https://www.youtube.com/watch?v=YbSn8DgpPMY");
+		VRCUrl q80684 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=YbSn8DgpPMY");
+		VRCUrl n080684 = new VRCUrl("https://www.youtube.com/watch?v=baQSu_iEwSQ");
+		VRCUrl q080684 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=baQSu_iEwSQ");
+		VRCUrl n34911 = new VRCUrl("https://www.youtube.com/watch?v=XJdm3UwgjkQ");
+		VRCUrl q34911 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=XJdm3UwgjkQ");
+		VRCUrl n034911 = new VRCUrl("https://www.youtube.com/watch?v=BgcRLIXw4dQ");
+		VRCUrl q034911 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=BgcRLIXw4dQ");
+		VRCUrl n46735 = new VRCUrl("https://www.youtube.com/watch?v=SL6zhBHO7oM");
+		VRCUrl q46735 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=SL6zhBHO7oM");
+		VRCUrl n046735 = new VRCUrl("https://www.youtube.com/watch?v=_k3hs7udRxU");
+		VRCUrl q046735 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=_k3hs7udRxU");
+		VRCUrl n80513 = new VRCUrl("https://www.youtube.com/watch?v=ITCuwhVcxfM");
+		VRCUrl q80513 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=ITCuwhVcxfM");
+		VRCUrl n080513 = new VRCUrl("https://www.youtube.com/watch?v=fnGzwDKfwoU");
+		VRCUrl q080513 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=fnGzwDKfwoU");
+		VRCUrl n32409 = new VRCUrl("https://www.youtube.com/watch?v=1K0QTRI4LWo");
+		VRCUrl q32409 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=1K0QTRI4LWo");
+		VRCUrl n032409 = new VRCUrl("https://www.youtube.com/watch?v=0JRGKQKUtNo&t=16");
+		VRCUrl q032409 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=0JRGKQKUtNo&t=16");
+		VRCUrl n80517 = new VRCUrl("https://www.youtube.com/watch?v=SPh9N53aPdk");
+		VRCUrl q80517 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=SPh9N53aPdk");
+		VRCUrl n080517 = new VRCUrl("https://www.youtube.com/watch?v=n-LezuGtBHo");
+		VRCUrl q080517 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=n-LezuGtBHo");
+		VRCUrl n14832 = new VRCUrl("https://www.youtube.com/watch?v=JN5j01PbG2k");
+		VRCUrl q14832 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=JN5j01PbG2k");
+		VRCUrl n014832 = new VRCUrl("https://www.youtube.com/watch?v=VwuP95CES70&t=24");
+		VRCUrl q014832 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=VwuP95CES70&t=24");
+		VRCUrl n4975 = new VRCUrl("https://www.youtube.com/watch?v=aEPDm4VDPSY");
+		VRCUrl q4975 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=aEPDm4VDPSY");
+		VRCUrl n04975 = new VRCUrl("https://www.youtube.com/watch?v=t5jJ_7dZcFI");
+		VRCUrl q04975 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=t5jJ_7dZcFI");
+		VRCUrl n80685 = new VRCUrl("https://www.youtube.com/watch?v=M8O13F8e6qY");
+		VRCUrl q80685 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=M8O13F8e6qY");
+		VRCUrl n080685 = new VRCUrl("https://www.youtube.com/watch?v=JHULkQPka7g");
+		VRCUrl q080685 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=JHULkQPka7g");
+		VRCUrl n46108 = new VRCUrl("https://www.youtube.com/watch?v=dLdU5RC8I4w");
+		VRCUrl q46108 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=dLdU5RC8I4w");
+		VRCUrl n046108 = new VRCUrl("https://www.youtube.com/watch?v=yZeKqyIq6Xc");
+		VRCUrl q046108 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=yZeKqyIq6Xc");
+		VRCUrl n37031 = new VRCUrl("https://www.youtube.com/watch?v=n5rJKhEMNJU");
+		VRCUrl q37031 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=n5rJKhEMNJU");
+		VRCUrl n037031 = new VRCUrl("https://www.youtube.com/watch?v=po-uPjBadzE");
+		VRCUrl q037031 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=po-uPjBadzE");
+		VRCUrl n29622 = new VRCUrl("https://www.youtube.com/watch?v=cH35tsn9qGU");
+		VRCUrl q29622 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=cH35tsn9qGU");
+		VRCUrl n029622 = new VRCUrl("https://www.youtube.com/watch?v=w42IYZX8Gk4");
+		VRCUrl q029622 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=w42IYZX8Gk4");
+		VRCUrl n24239 = new VRCUrl("https://www.youtube.com/watch?v=4rujuWGHyEI");
+		VRCUrl q24239 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=4rujuWGHyEI");
+		VRCUrl n024239 = new VRCUrl("https://www.youtube.com/watch?v=3ajhXkLIZ6A");
+		VRCUrl q024239 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=3ajhXkLIZ6A");
+		VRCUrl n77439 = new VRCUrl("https://www.youtube.com/watch?v=fjV48UIpgKk");
+		VRCUrl q77439 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=fjV48UIpgKk");
+		VRCUrl n077439 = new VRCUrl("https://www.youtube.com/watch?v=poiZpOXZXN8");
+		VRCUrl q077439 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=poiZpOXZXN8");
+		VRCUrl n24694 = new VRCUrl("https://www.youtube.com/watch?v=WHIQ8HGJgyc");
+		VRCUrl q24694 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=WHIQ8HGJgyc");
+		VRCUrl n024694 = new VRCUrl("https://www.youtube.com/watch?v=GOS6C2jXTa8&t=35s");
+		VRCUrl q024694 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=GOS6C2jXTa8&t=35s");
+		VRCUrl n97012 = new VRCUrl("https://www.youtube.com/watch?v=l3CJzyaMsg4");
+		VRCUrl q97012 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=l3CJzyaMsg4");
+		VRCUrl n097012 = new VRCUrl("https://www.youtube.com/watch?v=dqgK1mSN9Rk");
+		VRCUrl q097012 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=dqgK1mSN9Rk");
+		VRCUrl n96713 = new VRCUrl("https://www.youtube.com/watch?v=_vFdUM1m4RY");
+		VRCUrl q96713 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=_vFdUM1m4RY");
+		VRCUrl n096713 = new VRCUrl("https://www.youtube.com/watch?v=x-QVEpEubGY");
+		VRCUrl q096713 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=x-QVEpEubGY");
+		VRCUrl n11271 = new VRCUrl("https://www.youtube.com/watch?v=HO83PFAOaMM");
+		VRCUrl q11271 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=HO83PFAOaMM");
+		VRCUrl n011271 = new VRCUrl("https://www.youtube.com/watch?v=g06wUxtO90k&t=10");
+		VRCUrl q011271 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=g06wUxtO90k&t=10");
+		VRCUrl n8941 = new VRCUrl("https://www.youtube.com/watch?v=Uuptw1uHXmo");
+		VRCUrl q8941 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=Uuptw1uHXmo");
+		VRCUrl n08941 = new VRCUrl("https://www.youtube.com/watch?v=YzWxJT89AKQ");
+		VRCUrl q08941 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=YzWxJT89AKQ");
+		VRCUrl n80588 = new VRCUrl("https://www.youtube.com/watch?v=oSd96d2oZsk");
+		VRCUrl q80588 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=oSd96d2oZsk");
+		VRCUrl n080588 = new VRCUrl("https://www.youtube.com/watch?v=sqgxcCjD04s");
+		VRCUrl q080588 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=sqgxcCjD04s");
+		VRCUrl n33403 = new VRCUrl("https://www.youtube.com/watch?v=mSjlSHqEIvg");
+		VRCUrl q33403 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=mSjlSHqEIvg");
+		VRCUrl n033403 = new VRCUrl("https://www.youtube.com/watch?v=sitVD6pYGXA");
+		VRCUrl q033403 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=sitVD6pYGXA");
+		VRCUrl n48978 = new VRCUrl("https://www.youtube.com/watch?v=c8nMqaMREn4");
+		VRCUrl q48978 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=c8nMqaMREn4");
+		VRCUrl n048978 = new VRCUrl("https://www.youtube.com/watch?v=ohSpvSGXfhY&t=11");
+		VRCUrl q048978 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=ohSpvSGXfhY&t=11");
+		VRCUrl n98685 = new VRCUrl("https://www.youtube.com/watch?v=radQklU812A");
+		VRCUrl q98685 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=radQklU812A");
+		VRCUrl n098685 = new VRCUrl("https://www.youtube.com/watch?v=r1iFxWW_WjY");
+		VRCUrl q098685 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=r1iFxWW_WjY");
+		VRCUrl n80794 = new VRCUrl("https://www.youtube.com/watch?v=H34zGRQ7r1c");
+		VRCUrl q80794 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=H34zGRQ7r1c");
+		VRCUrl n080794 = new VRCUrl("https://www.youtube.com/watch?v=n30-nDqriys");
+		VRCUrl q080794 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=n30-nDqriys");
+		VRCUrl n77533 = new VRCUrl("https://www.youtube.com/watch?v=7uofHm2BpWc");
+		VRCUrl q77533 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=7uofHm2BpWc");
+		VRCUrl n077533 = new VRCUrl("https://www.youtube.com/watch?v=X3PFu82F_S8");
+		VRCUrl q077533 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=X3PFu82F_S8");
+		VRCUrl n77540 = new VRCUrl("https://www.youtube.com/watch?v=-aUlvfIfVyE");
+		VRCUrl q77540 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=-aUlvfIfVyE");
+		VRCUrl n077540 = new VRCUrl("https://www.youtube.com/watch?v=zcyn9HZZ6vs");
+		VRCUrl q077540 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=zcyn9HZZ6vs");
+		VRCUrl n75959 = new VRCUrl("https://www.youtube.com/watch?v=O5jARBlrGQA");
+		VRCUrl q75959 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=O5jARBlrGQA");
+		VRCUrl n075959 = new VRCUrl("https://www.youtube.com/watch?v=236ddk-0sOI");
+		VRCUrl q075959 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=236ddk-0sOI");
+		VRCUrl n6008 = new VRCUrl("https://www.youtube.com/watch?v=QpLYkurLpUI");
+		VRCUrl q6008 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=QpLYkurLpUI");
+		VRCUrl n06008 = new VRCUrl("https://www.youtube.com/watch?v=Nse047Y9tzc");
+		VRCUrl q06008 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=Nse047Y9tzc");
+		VRCUrl n6002 = new VRCUrl("https://www.youtube.com/watch?v=DBKmx3dc5t8");
+		VRCUrl q6002 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=DBKmx3dc5t8");
+		VRCUrl n06002 = new VRCUrl("https://www.youtube.com/watch?v=3bYVFCNg1L0");
+		VRCUrl q06002 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=3bYVFCNg1L0");
+		VRCUrl n34859 = new VRCUrl("https://www.youtube.com/watch?v=r-dU461EW0U");
+		VRCUrl q34859 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=r-dU461EW0U");
+		VRCUrl n034859 = new VRCUrl("https://www.youtube.com/watch?v=ysnUHXksic8");
+		VRCUrl q034859 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=ysnUHXksic8");
+		VRCUrl n46645 = new VRCUrl("https://www.youtube.com/watch?v=9Ge0toW_n1k");
+		VRCUrl q46645 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=9Ge0toW_n1k");
+		VRCUrl n046645 = new VRCUrl("https://www.youtube.com/watch?v=WTGg0d0HDQU");
+		VRCUrl q046645 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=WTGg0d0HDQU");
+		VRCUrl n80393 = new VRCUrl("https://www.youtube.com/watch?v=FyCc9r9nrYk");
+		VRCUrl q80393 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=FyCc9r9nrYk");
+		VRCUrl n080393 = new VRCUrl("https://www.youtube.com/watch?v=pLQbrniOWQ8");
+		VRCUrl q080393 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=pLQbrniOWQ8");
+		VRCUrl n80383 = new VRCUrl("https://www.youtube.com/watch?v=9EO_nFF96kg");
+		VRCUrl q80383 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=9EO_nFF96kg");
+		VRCUrl n080383 = new VRCUrl("https://www.youtube.com/watch?v=FnNYyVrvV7k");
+		VRCUrl q080383 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=FnNYyVrvV7k");
+		VRCUrl n80262 = new VRCUrl("https://www.youtube.com/watch?v=6C7DkTmGIzw");
+		VRCUrl q80262 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=6C7DkTmGIzw");
+		VRCUrl n080262 = new VRCUrl("https://www.youtube.com/watch?v=1-rD_vr_2xQ");
+		VRCUrl q080262 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=1-rD_vr_2xQ");
+		VRCUrl n16587 = new VRCUrl("https://www.youtube.com/watch?v=2G8ZbJXsohQ");
+		VRCUrl q16587 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=2G8ZbJXsohQ");
+		VRCUrl n016587 = new VRCUrl("https://www.youtube.com/watch?v=uQ7YmfXtPZA");
+		VRCUrl q016587 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=uQ7YmfXtPZA");
+		VRCUrl n30477 = new VRCUrl("https://www.youtube.com/watch?v=_JJm7DaaX3w");
+		VRCUrl q30477 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=_JJm7DaaX3w");
+		VRCUrl n030477 = new VRCUrl("https://www.youtube.com/watch?v=v4Ax_Fhhoyc");
+		VRCUrl q030477 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=v4Ax_Fhhoyc");
+		VRCUrl n33381 = new VRCUrl("https://www.youtube.com/watch?v=QTWTVJEbcNk");
+		VRCUrl q33381 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=QTWTVJEbcNk");
+		VRCUrl n033381 = new VRCUrl("https://www.youtube.com/watch?v=lTsSncrcXmc");
+		VRCUrl q033381 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=lTsSncrcXmc");
+		VRCUrl n99748 = new VRCUrl("https://www.youtube.com/watch?v=54aQ1UakIl8");
+		VRCUrl q99748 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=54aQ1UakIl8");
+		VRCUrl n099748 = new VRCUrl("https://www.youtube.com/watch?v=NB9HL867-CQ");
+		VRCUrl q099748 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=NB9HL867-CQ");
+		VRCUrl n96982 = new VRCUrl("https://www.youtube.com/watch?v=iIRzlgXeoFs");
+		VRCUrl q96982 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=iIRzlgXeoFs");
+		VRCUrl n096982 = new VRCUrl("https://www.youtube.com/watch?v=zi_6oaQyckM");
+		VRCUrl q096982 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=zi_6oaQyckM");
+		VRCUrl n39404 = new VRCUrl("https://www.youtube.com/watch?v=HgwFJtvdijE");
+		VRCUrl q39404 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=HgwFJtvdijE");
+		VRCUrl n039404 = new VRCUrl("https://www.youtube.com/watch?v=CWAhNgjB5jM");
+		VRCUrl q039404 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=CWAhNgjB5jM");
+		VRCUrl n45776 = new VRCUrl("https://www.youtube.com/watch?v=YQMsI1lpcPQ");
+		VRCUrl q45776 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=YQMsI1lpcPQ");
+		VRCUrl n045776 = new VRCUrl("https://www.youtube.com/watch?v=gu9qZ0C1aJk");
+		VRCUrl q045776 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=gu9qZ0C1aJk");
+		VRCUrl n80756 = new VRCUrl("https://www.youtube.com/watch?v=Gcj76T_rS4M");
+		VRCUrl q80756 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=Gcj76T_rS4M");
+		VRCUrl n080756 = new VRCUrl("https://www.youtube.com/watch?v=BRtDS6NDLJw");
+		VRCUrl q080756 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=BRtDS6NDLJw");
+		VRCUrl n80757 = new VRCUrl("https://www.youtube.com/watch?v=ZXFhhDUCuq4");
+		VRCUrl q80757 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=ZXFhhDUCuq4");
+		VRCUrl n080757 = new VRCUrl("https://www.youtube.com/watch?v=XZ4UK31FpRw");
+		VRCUrl q080757 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=XZ4UK31FpRw");
+		VRCUrl n80755 = new VRCUrl("https://www.youtube.com/watch?v=nPu7WCCVf6I");
+		VRCUrl q80755 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=nPu7WCCVf6I");
+		VRCUrl n080755 = new VRCUrl("https://www.youtube.com/watch?v=66YeevTb95s");
+		VRCUrl q080755 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=66YeevTb95s");
+		VRCUrl n80636 = new VRCUrl("https://www.youtube.com/watch?v=4KfHjwCApy0");
+		VRCUrl q80636 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=4KfHjwCApy0");
+		VRCUrl n080636 = new VRCUrl("https://www.youtube.com/watch?v=rAI5epQCf9M");
+		VRCUrl q080636 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=rAI5epQCf9M");
+		VRCUrl n80692 = new VRCUrl("https://www.youtube.com/watch?v=SSIdFigagBQ");
+		VRCUrl q80692 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=SSIdFigagBQ");
+		VRCUrl n080692 = new VRCUrl("https://www.youtube.com/watch?v=1sCl4f-o2RI");
+		VRCUrl q080692 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=1sCl4f-o2RI");
+		VRCUrl n80688 = new VRCUrl("https://www.youtube.com/watch?v=jsspH5uwpy4");
+		VRCUrl q80688 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=jsspH5uwpy4");
+		VRCUrl n080688 = new VRCUrl("https://www.youtube.com/watch?v=A4gSgu4cMwI");
+		VRCUrl q080688 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=A4gSgu4cMwI");
+		VRCUrl n80802 = new VRCUrl("https://www.youtube.com/watch?v=dKDKKXz_rD8");
+		VRCUrl q80802 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=dKDKKXz_rD8");
+		VRCUrl n080802 = new VRCUrl("https://www.youtube.com/watch?v=zzQqZp5JKSg");
+		VRCUrl q080802 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=zzQqZp5JKSg");
+		VRCUrl n24285 = new VRCUrl("https://www.youtube.com/watch?v=kTQEmNL5swE&feature=youtu.be");
+		VRCUrl q24285 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=kTQEmNL5swE&feature=youtu.be");
+		VRCUrl n024285 = new VRCUrl("https://www.youtube.com/watch?v=lpka6ymCkIY");
+		VRCUrl q024285 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=lpka6ymCkIY");
+		VRCUrl n24293 = new VRCUrl("https://www.youtube.com/watch?v=3qvKsu9dZaw");
+		VRCUrl q24293 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=3qvKsu9dZaw");
+		VRCUrl n024293 = new VRCUrl("https://www.youtube.com/watch?v=ASxOYpcul_c");
+		VRCUrl q024293 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=ASxOYpcul_c");
+		VRCUrl n46302 = new VRCUrl("https://www.youtube.com/watch?v=GMIAVpi3UvE");
+		VRCUrl q46302 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=GMIAVpi3UvE");
+		VRCUrl n046302 = new VRCUrl("https://www.youtube.com/watch?v=ETZMPXwenUw");
+		VRCUrl q046302 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=ETZMPXwenUw");
+		VRCUrl n89123 = new VRCUrl("https://www.youtube.com/watch?v=ItH06aTGWdw");
+		VRCUrl q89123 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=ItH06aTGWdw");
+		VRCUrl n089123 = new VRCUrl("https://www.youtube.com/watch?v=Fjm_lwn0AEc");
+		VRCUrl q089123 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=Fjm_lwn0AEc");
+		VRCUrl n39814 = new VRCUrl("https://www.youtube.com/watch?v=hmAC0Ryq1Js");
+		VRCUrl q39814 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=hmAC0Ryq1Js");
+		VRCUrl n039814 = new VRCUrl("https://www.youtube.com/watch?v=Z2_PlMn8ZtY");
+		VRCUrl q039814 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=Z2_PlMn8ZtY");
+		VRCUrl n28534 = new VRCUrl("https://www.youtube.com/watch?v=E-5JyXMCi3g");
+		VRCUrl q28534 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=E-5JyXMCi3g");
+		VRCUrl n028534 = new VRCUrl("https://www.youtube.com/watch?v=XpU15Lobugg");
+		VRCUrl q028534 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=XpU15Lobugg");
+		VRCUrl n34131 = new VRCUrl("https://www.youtube.com/watch?v=QZjslJ9wG7c");
+		VRCUrl q34131 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=QZjslJ9wG7c");
+		VRCUrl n034131 = new VRCUrl("https://www.youtube.com/watch?v=k7yGwXb77PA");
+		VRCUrl q034131 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=k7yGwXb77PA");
+		VRCUrl n80912 = new VRCUrl("https://www.youtube.com/watch?v=KFOfcnyDDBQ");
+		VRCUrl q80912 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=KFOfcnyDDBQ");
+		VRCUrl n080912 = new VRCUrl("https://www.youtube.com/watch?v=fgSXAKsq-Vo");
+		VRCUrl q080912 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=fgSXAKsq-Vo");
+		VRCUrl n62425 = new VRCUrl("https://www.youtube.com/watch?v=dVwxZV78Yvs");
+		VRCUrl q62425 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=dVwxZV78Yvs");
+		VRCUrl n062425 = new VRCUrl("https://www.youtube.com/watch?v=E8gmARGvPlI");
+		VRCUrl q062425 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=E8gmARGvPlI");
+		VRCUrl n24000 = new VRCUrl("https://www.youtube.com/watch?v=m6VDhXLP7Hs");
+		VRCUrl q24000 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=m6VDhXLP7Hs");
+		VRCUrl n024000 = new VRCUrl("https://www.youtube.com/watch?v=-A1E_I2_zIs");
+		VRCUrl q024000 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=-A1E_I2_zIs");
+		VRCUrl n80913 = new VRCUrl("https://www.youtube.com/watch?v=6sirDXntv14");
+		VRCUrl q80913 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=6sirDXntv14");
+		VRCUrl n080913 = new VRCUrl("https://www.youtube.com/watch?v=fU8picIMbSk");
+		VRCUrl q080913 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=fU8picIMbSk");
+		VRCUrl n80869 = new VRCUrl("https://www.youtube.com/watch?v=ItGlvCB6KUo");
+		VRCUrl q80869 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=ItGlvCB6KUo");
+		VRCUrl n080869 = new VRCUrl("https://www.youtube.com/watch?v=MpxDE1d-Y3s");
+		VRCUrl q080869 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=MpxDE1d-Y3s");
+		VRCUrl n80434 = new VRCUrl("https://www.youtube.com/watch?v=YZKbxFWNOxI");
+		VRCUrl q80434 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=YZKbxFWNOxI");
+		VRCUrl n080434 = new VRCUrl("https://www.youtube.com/watch?v=WHkQtNBCRQo");
+		VRCUrl q080434 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=WHkQtNBCRQo");
+		VRCUrl n80831 = new VRCUrl("https://www.youtube.com/watch?v=tjgXYHxTngM");
+		VRCUrl q80831 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=tjgXYHxTngM");
+		VRCUrl n080831 = new VRCUrl("https://www.youtube.com/watch?v=YGsBe3H7QGs");
+		VRCUrl q080831 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=YGsBe3H7QGs");
+		VRCUrl n15128 = new VRCUrl("https://youtu.be/_q_sBhDuC2k");
+		VRCUrl q15128 = new VRCUrl("https://t-ne.x0.to/?url=https://youtu.be/_q_sBhDuC2k");
+		VRCUrl n015128 = new VRCUrl("https://www.youtube.com/watch?v=3M_gmxJVL1Q&t=5");
+		VRCUrl q015128 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=3M_gmxJVL1Q&t=5");
+		VRCUrl n2632 = new VRCUrl("https://youtu.be/06-X-RJIlUg");
+		VRCUrl q2632 = new VRCUrl("https://t-ne.x0.to/?url=https://youtu.be/06-X-RJIlUg");
+		VRCUrl n02632 = new VRCUrl("https://www.youtube.com/watch?v=1e8Dzz-2IN8");
+		VRCUrl q02632 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=1e8Dzz-2IN8");
+		VRCUrl n46701 = new VRCUrl("https://www.youtube.com/watch?v=_aaz8T1dqoc");
+		VRCUrl q46701 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=_aaz8T1dqoc");
+		VRCUrl n046701 = new VRCUrl("https://www.youtube.com/watch?v=rCeM57e2BfU");
+		VRCUrl q046701 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=rCeM57e2BfU");
+		VRCUrl n48124 = new VRCUrl("https://www.youtube.com/watch?v=1KVxVdqd5ks");
+		VRCUrl q48124 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=1KVxVdqd5ks");
+		VRCUrl n048124 = new VRCUrl("https://www.youtube.com/watch?v=3ze6drtwiE4");
+		VRCUrl q048124 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=3ze6drtwiE4");
+		VRCUrl n49964 = new VRCUrl("https://www.youtube.com/watch?v=HSnduWR2GS8");
+		VRCUrl q49964 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=HSnduWR2GS8");
+		VRCUrl n049964 = new VRCUrl("https://www.youtube.com/watch?v=GYX5QOVkHxc");
+		VRCUrl q049964 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=GYX5QOVkHxc");
+		VRCUrl n29282 = new VRCUrl("https://www.youtube.com/watch?v=RpvgFap_A7E");
+		VRCUrl q29282 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=RpvgFap_A7E");
+		VRCUrl n029282 = new VRCUrl("https://www.youtube.com/watch?v=gx_mg-1WhWw&t=4");
+		VRCUrl q029282 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=gx_mg-1WhWw&t=4");
+		VRCUrl n96337 = new VRCUrl("https://www.youtube.com/watch?v=1vMHEavYOx8");
+		VRCUrl q96337 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=1vMHEavYOx8");
+		VRCUrl n096337 = new VRCUrl("https://www.youtube.com/watch?v=bTchEG-T7cA&t=7s");
+		VRCUrl q096337 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=bTchEG-T7cA&t=7s");
+		VRCUrl n46958 = new VRCUrl("https://www.youtube.com/watch?v=qSX6oZq7h5w");
+		VRCUrl q46958 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=qSX6oZq7h5w");
+		VRCUrl n046958 = new VRCUrl("https://www.youtube.com/watch?v=4EiNsoTc9kk");
+		VRCUrl q046958 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=4EiNsoTc9kk");
+		VRCUrl n24001 = new VRCUrl("https://youtu.be/Znw6mk8iqRY");
+		VRCUrl q24001 = new VRCUrl("https://t-ne.x0.to/?url=https://youtu.be/Znw6mk8iqRY");
+		VRCUrl n024001 = new VRCUrl("https://youtu.be/RHqOdDG3Jjg");
+		VRCUrl q024001 = new VRCUrl("https://t-ne.x0.to/?url=https://youtu.be/RHqOdDG3Jjg");
+		VRCUrl n76401 = new VRCUrl("https://youtu.be/4h4z8cxrYkE");
+		VRCUrl q76401 = new VRCUrl("https://t-ne.x0.to/?url=https://youtu.be/4h4z8cxrYkE");
+		VRCUrl n076401 = new VRCUrl("https://youtu.be/CeoUtW9UYJU");
+		VRCUrl q076401 = new VRCUrl("https://t-ne.x0.to/?url=https://youtu.be/CeoUtW9UYJU");
+		VRCUrl n80578 = new VRCUrl("https://youtu.be/oB6TNs1n38o");
+		VRCUrl q80578 = new VRCUrl("https://t-ne.x0.to/?url=https://youtu.be/oB6TNs1n38o");
+		VRCUrl n080578 = new VRCUrl("https://youtu.be/EyI9dpThHQk");
+		VRCUrl q080578 = new VRCUrl("https://t-ne.x0.to/?url=https://youtu.be/EyI9dpThHQk");
+		VRCUrl n16786 = new VRCUrl("https://www.youtube.com/watch?v=5RqTanLfVdQ");
+		VRCUrl q16786 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=5RqTanLfVdQ");
+		VRCUrl n016786 = new VRCUrl("https://www.youtube.com/watch?v=2q_NAmMOecQ");
+		VRCUrl q016786 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=2q_NAmMOecQ");
+		VRCUrl n80817 = new VRCUrl("https://www.youtube.com/watch?v=7Rll1FOJ_yU");
+		VRCUrl q80817 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=7Rll1FOJ_yU");
+		VRCUrl n080817 = new VRCUrl("https://www.youtube.com/watch?v=--FmExEAsM8");
+		VRCUrl q080817 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=--FmExEAsM8");
+		VRCUrl n80866 = new VRCUrl("https://www.youtube.com/watch?v=e2BLAjTl5Jc");
+		VRCUrl q80866 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=e2BLAjTl5Jc");
+		VRCUrl n080866 = new VRCUrl("https://www.youtube.com/watch?v=mLCsbacHxA8&t=16s");
+		VRCUrl q080866 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=mLCsbacHxA8&t=16s");
 
 		public string songname(string num)
 		{
@@ -4770,6 +5110,8 @@ namespace UdonSharp.Video
 					return "가을안부(When Autumn Comes)";
 				case 98524:
 					return "가을타나봐(Fall in Fall)";
+				case 80434:
+					return "가을타나봐(Fall in Fall)";
 				case 37243:
 					return "가족사진(Family Photo)";
 				case 27959:
@@ -4818,6 +5160,8 @@ namespace UdonSharp.Video
 					return "결전스피릿(決戦スピリット) (ハイキュー!! 하이큐!! TO THE TOP ED)";
 				case 46977:
 					return "결정(Choice)";
+				case 96713:
+					return "결혼(Marriage) (이번생은처음이라 Because This Is My First Life OST)";
 				case 32993:
 					return "결혼까지생각했어(Even thought of marriage)";
 				case 28293:
@@ -4828,9 +5172,15 @@ namespace UdonSharp.Video
 					return "고래(Whale)";
 				case 38935:
 					return "고무신거꾸로신지마(Sense of Betrayal)";
+				case 32409:
+					return "고백(Confession)";
 				case 76373:
 					return "고백(Confession) (바른연애길잡이 Romance 101 OST)";
+				case 77533:
+					return "고백(Go Back)";
 				case 15388:
+					return "고백(Go Back)";
+				case 80256:
 					return "고백(Go Back)";
 				case 77457:
 					return "고백(Go Back)";
@@ -4838,6 +5188,8 @@ namespace UdonSharp.Video
 					return "고백예행연습(告白予行練習)";
 				case 97090:
 					return "고양이(CAT)";
+				case 6008:
+					return "고요한밤거룩한밤(Silent Night)";
 				case 76300:
 					return "고추참치(Pepper tuna)";
 				case 75227:
@@ -4850,6 +5202,8 @@ namespace UdonSharp.Video
 					return "곰인형(Teddy Bear)";
 				case 91427:
 					return "공일공(010)";
+				case 75959:
+					return "과거현재미래(Then, Now and Forever)";
 				case 77446:
 					return "과제곡(교수님 죄송합니다) The Assignment Song(Sorry professor)";
 				case 15546:
@@ -4900,6 +5254,8 @@ namespace UdonSharp.Video
 					return "그대없는밤에(night without you)";
 				case 786:
 					return "그대에게(to you)";
+				case 80869:
+					return "그대잠시내게(Come Rest With Me)";
 				case 48460:
 					return "그때그아이들은(Will Last Forever)";
 				case 89034:
@@ -4930,6 +5286,8 @@ namespace UdonSharp.Video
 					return "기다릴게(I will be waiting)";
 				case 34257:
 					return "기다릴게(I will be waiting) (공주의남자 OST)";
+				case 6002:
+					return "기쁘다구주오셨네(Joy to the World)";
 				case 26785:
 					return "기적/키세키(キセキ)";
 				case 9706:
@@ -5042,6 +5400,8 @@ namespace UdonSharp.Video
 					return "내일이오면(Tomorrow)";
 				case 46698:
 					return "냉탕에상어(Shark in the Cold Pool)";
+				case 97012:
+					return "너,너(You, You)";
 				case 98185:
 					return "너나해(Egotistic)";
 				case 28948:
@@ -5052,6 +5412,8 @@ namespace UdonSharp.Video
 					return "너로피어오라(Flowering)";
 				case 98727:
 					return "너를만나(Me After You)";
+				case 80473:
+					return "너를생각해(Think About You)";
 				case 48088:
 					return "너무너무너무(Very Very Very)";
 				case 76207:
@@ -5062,10 +5424,14 @@ namespace UdonSharp.Video
 					return "너에게가는길1(Crazy for You) (슬램덩크 OP)";
 				case 46490:
 					return "너였다면(If It Is You) (또오해영OST)";
+				case 80688:
+					return "너와나의(You and I) Memories";
 				case 9424:
 					return "너와함께라면(With You) (슬램덩크 OST)";
 				case 38028:
 					return "너의모든순간(Every Moment Of You) (별에서온그대 OST)";
+				case 80513:
+					return "너의모습(Imagine)";
 				case 54825:
 					return "너의번호를누르고(Dial Your Number)";
 				case 76814:
@@ -5092,6 +5458,8 @@ namespace UdonSharp.Video
 					return "네가아니면안될것같아(君じゃなきゃダメみたい) (月刊少女野崎くん 월간순정노자키군 OP)";
 				case 3543:
 					return "네모의꿈(Dream of a square)";
+				case 89123:
+					return "네시(4 O'clock)";
 				case 96683:
 					return "노땡큐(No Thanxxx)";
 				case 48565:
@@ -5124,6 +5492,8 @@ namespace UdonSharp.Video
 					return "눈의꽃(雪の華)";
 				case 14238:
 					return "눈의꽃(Snow Flower) (미안하다사랑한다 OST)";
+				case 80831:
+					return "눈이오잖아(When it snows)";
 				case 75616:
 					return "느린심장박동(Slow Heartbeat)";
 				case 24472:
@@ -5142,6 +5512,10 @@ namespace UdonSharp.Video
 					return "다시만난세계(Into The New World)";
 				case 91998:
 					return "다시만날까봐(Again)";
+				case 46108:
+					return "다시사랑한다면(If we love again)";
+				case 80692:
+					return "다음생이있다면당신을만나서다시사랑할래요(I’d love you again if I have a next life)";
 				case 46313:
 					return "다이너마이트(Dynamite)";
 				case 34117:
@@ -5150,6 +5524,8 @@ namespace UdonSharp.Video
 					return "다잊어(Let It Go) (Frozen 겨울왕국 OST)";
 				case 76851:
 					return "다정히내이름을부르면(If you lovingly call my name)";
+				case 80755:
+					return "다정히내이름을부르면(If you lovingly call my name) 남자(Male) Ver.";
 				case 38596:
 					return "단발머리(Short Hair)";
 				case 76805:
@@ -5174,6 +5550,8 @@ namespace UdonSharp.Video
 					return "도리도리쏭(Gamzadori)";
 				case 75872:
 					return "도망가(Run away)";
+				case 24694:
+					return "도망가자(Run With Me)";
 				case 49603:
 					return "도원경(桃源境,Shangri-La)";
 				case 28309:
@@ -5190,6 +5568,8 @@ namespace UdonSharp.Video
 					return "돌덩이(Stone Block) (이태원클라쓰 OST)";
 				case 76599:
 					return "돌림노래(Troll)";
+				case 46302:
+					return "돌아오지마(Don't Come Back)";
 				case 76046:
 					return "동경캐스터(東京キャスタ)";
 				case 98964:
@@ -5206,6 +5586,8 @@ namespace UdonSharp.Video
 					return "드라마트루기(ドラマツルギー)";
 				case 68333:
 					return "드라이플라워(ドライフラワー)";
+				case 46645:
+					return "드러머(Drummer)";
 				case 33488:
 					return "드림하이(Dream High)";
 				case 37824:
@@ -5220,6 +5602,8 @@ namespace UdonSharp.Video
 					return "따르릉(Ring Ring)";
 				case 10136:
 					return "땡벌(DDaeng Beol)";
+				case 24285:
+					return "떨어지는낙엽까지도(Falling Leaves Are Beautiful)";
 				case 77389:
 					return "똥밟았네(Stepped On Poop) (포텐독 PotenDogs OST)";
 				case 19510:
@@ -5250,10 +5634,14 @@ namespace UdonSharp.Video
 					return "루이비똥허리(Louis Vuitton belt)";
 				case 16217:
 					return "룩셈부르크(Luxembourg)";
+				case 80756:
+					return "리무진(Limousine)";
 				case 48436:
 					return "리얼리티(Reality)";
 				case 76773:
 					return "마.피.아. In the morning";
+				case 34859:
+					return "마녀가된이유(Reason To Become A Witch)";
 				case 25837:
 					return "마루노우치새디스틱(丸の内サディスティック)";
 				case 28927:
@@ -5264,6 +5652,8 @@ namespace UdonSharp.Video
 					return "마법의성(Magic Castle)";
 				case 55703:
 					return "마스크를벗고나면(After take off mask)";
+				case 28534:
+					return "마스터피스(M@STERPIECE)";
 				case 48528:
 					return "마에스트로(Maestro)";
 				case 29262:
@@ -5286,10 +5676,14 @@ namespace UdonSharp.Video
 					return "마침표(Full Stop)";
 				case 34600:
 					return "막걸리나(Thick Rice Wine)";
+				case 80757:
+					return "만남은쉽고이별은어려워(Meeting is easy, parting is hard)";
 				case 19187:
 					return "만약에(If) (쾌도홍길동 Hong Gil Dong OST)";
 				case 4751:
 					return "말달리자(Speed Up Losers)";
+				case 8941:
+					return "말리꽃(Malri Flower) (비천무 OST)";
 				case 28888:
 					return "말이필요없는약속(言葉のいらない約束) (NARUTO-ナルト-疾風伝 나루토 질풍전 ED)";
 				case 68078:
@@ -5324,6 +5718,8 @@ namespace UdonSharp.Video
 					return "모래의행성(砂の惑星)";
 				case 68000:
 					return "목마름을외치다(カワキヲアメク) (ドメスティックな彼女 도메스틱그녀 OP)";
+				case 29282:
+					return "몸매(MOMMAE)";
 				case 45663:
 					return "못먹는감(Sour Grapes)";
 				case 48665:
@@ -5342,6 +5738,8 @@ namespace UdonSharp.Video
 					return "무제(無題,Untitled,2014)";
 				case 5002:
 					return "묵념(Silence)";
+				case 80636:
+					return "문득(Suddenly)";
 				case 76095:
 					return "문어의꿈(Octopus' dream)";
 				case 37603:
@@ -5350,6 +5748,8 @@ namespace UdonSharp.Video
 					return "문제아(Trouble Child)";
 				case 24187:
 					return "물만난물고기(Fish in the water)";
+				case 33403:
+					return "미리메리크리스마스(Merry Chirstmas In Advance)";
 				case 68335:
 					return "미스터달링(ミスター・ダーリン)";
 				case 30197:
@@ -5358,6 +5758,8 @@ namespace UdonSharp.Video
 					return "미아(Lost Child) (Acoustic Ver.)";
 				case 97099:
 					return "미안해(lie)";
+				case 80383:
+					return "미치고싶어(Can’t breathe)";
 				case 54925:
 					return "미친소리(Crazy Excuse)";
 				case 32156:
@@ -5464,6 +5866,8 @@ namespace UdonSharp.Video
 					return "불을내려주소서(Set Me Fire)";
 				case 55697:
 					return "불행면접(Misfortune interview)";
+				case 80794:
+					return "불협화음(Dissonance)";
 				case 30399:
 					return "붉은노을(Sunset Glow)";
 				case 1842:
@@ -5482,6 +5886,8 @@ namespace UdonSharp.Video
 					return "비와당신(Rain and You) (슬기로운의사생활시즌2 OST)";
 				case 75549:
 					return "비행(flight)";
+				case 16223:
+					return "비행기(Airplane)";
 				case 49587:
 					return "비행운(Contrail)";
 				case 76605:
@@ -5516,10 +5922,14 @@ namespace UdonSharp.Video
 					return "사람들이움직이는게(HOW PEOPLE MOVE)";
 				case 75823:
 					return "사랑못해,남들쉽게다하는거(Others love easily, but I can’t)";
+				case 39814:
+					return "사랑범벅(Love Mash)";
 				case 31588:
 					return "사랑비(Love Rain)";
 				case 27894:
 					return "사랑색으로피어나(恋色に咲け) (ずっと前から好きでした。~告白実行委員会~ 예전부터 계속 좋아했어: 고백실행위원회 OP)";
+				case 15128:
+					return "사랑스러워(Loveable)";
 				case 15871:
 					return "사랑안해(I Won't Love)";
 				case 48097:
@@ -5528,6 +5938,10 @@ namespace UdonSharp.Video
 					return "사랑에연습이있었다면(If there was practice in love)";
 				case 76208:
 					return "사랑은(F The World)";
+				case 46735:
+					return "사랑은늘도망가(Love Always Run Away)";
+				case 80548:
+					return "사랑은늘도망가(Love Always Run Away)";
 				case 33385:
 					return "사랑은아야야(Love Is Ouch)";
 				case 47190:
@@ -5542,6 +5956,8 @@ namespace UdonSharp.Video
 					return "사랑을전하고싶다던가(愛を伝えたいだとか)";
 				case 97218:
 					return "사랑을했다(LOVE SCENARIO)";
+				case 2632:
+					return "사랑의 서약(Promise of love)";
 				case 13721:
 					return "사랑의바보(Love Fool)";
 				case 31308:
@@ -5568,10 +5984,14 @@ namespace UdonSharp.Video
 					return "사랑한다안한다(Loves Me, Loves Me Not)";
 				case 13297:
 					return "사랑합니다(I love you)";
+				case 11271:
+					return "사랑합니다(I love you)";
 				case 13706:
 					return "사랑해요(I Love You)";
 				case 4526:
 					return "사랑해줘(アイシテ)";
+				case 14832:
+					return "사랑했나봐(It must have been lov)";
 				case 97625:
 					return "사랑했었다(Still Love You)";
 				case 17050:
@@ -5704,6 +6124,8 @@ namespace UdonSharp.Video
 					return "술한잔해요(Have a drink)";
 				case 75586:
 					return "숲의아이(Bon voyage)";
+				case 80684:
+					return "쉬어(BREATHE)";
 				case 27737:
 					return "슈가송과비터스텝(シュガーソングと ビターステップ) (血界戦線 혈계전선 ED)";
 				case 18453:
@@ -5732,6 +6154,10 @@ namespace UdonSharp.Video
 					return "시간과낙엽(Time and Fallen Leaves)";
 				case 24193:
 					return "시간을갖자(Let`s take time)";
+				case 80299:
+					return "시간을거슬러(Back In Time) (낮에뜨는달 The Moon during the Day OST)";
+				case 34911:
+					return "시간을거슬러(Back In Time) (해를품은달 The Moon That Embraces The Sun OST)";
 				case 24519:
 					return "시간의바깥(above the time)";
 				case 28650:
@@ -5790,6 +6216,8 @@ namespace UdonSharp.Video
 					return "아빠힘내세요(Cheer up dad)";
 				case 30260:
 					return "아싸아싸(Yes, yes, yes) (개구리중사케로로 Sergeant Keroro OST)";
+				case 24001:
+					return "아이(アイ,AI,사랑)";
 				case 28607:
 					return "아이네클라이네(アイネクライネ)";
 				case 16463:
@@ -5908,6 +6336,8 @@ namespace UdonSharp.Video
 					return "여수밤바다(Yeosu Night Sea)";
 				case 32933:
 					return "여우비(Fox Rain)";
+				case 4975:
+					return "여전히아름다운지(Is it still beautiful)";
 				case 97864:
 					return "여행(Travel)";
 				case 68044:
@@ -5950,6 +6380,8 @@ namespace UdonSharp.Video
 					return "오늘도빛나는너에게(To You My Light)";
 				case 76955:
 					return "오늘따라더미운그대가(Hate you even more today)";
+				case 37031:
+					return "오늘은가지마(Don't Go Today)";
 				case 31980:
 					return "오늘헤어졌어요(Broke Up Today)";
 				case 35819:
@@ -6010,6 +6442,8 @@ namespace UdonSharp.Video
 					return "우주를줄게(Galaxy)";
 				case 76528:
 					return "운전만해(We Ride)";
+				case 39404:
+					return "울면안돼(The Winter's Tale)";
 				case 28862:
 					return "울프(ウルフ,Wolf)";
 				case 75985:
@@ -6058,6 +6492,8 @@ namespace UdonSharp.Video
 					return "이별주(Sad Drinking)";
 				case 98499:
 					return "이별하러가는길(The Way To Say Goodbye)";
+				case 24239:
+					return "이별행동(Breakup)";
 				case 48398:
 					return "이쁘다니까(You are so beautiful)";
 				case 46716:
@@ -6102,6 +6538,10 @@ namespace UdonSharp.Video
 					return "잠이들어야(Can't Sleep)";
 				case 75838:
 					return "잠이오질않네요(Can't Sleep)";
+				case 80913:
+					return "장난기기능(おちゃめ機能)";
+				case 24000:
+					return "장난기기능(おちゃめ機能)";
 				case 76726:
 					return "장산범(COPYCAT)";
 				case 49508:
@@ -6116,6 +6556,8 @@ namespace UdonSharp.Video
 					return "전전전세(前前前世) (映画'君の名は。너의이름은 OST)";
 				case 97657:
 					return "전혀(Not at all)";
+				case 80517:
+					return "전화한번못하니(Not even a call) (너에게하고싶은말)";
 				case 28828:
 					return "정말싫었을텐데(大嫌いなはずだった。) (ずっと前から好きでした。~告白実行委員会~ 예전부터 계속 좋아했어: 고백실행위원회 OST)";
 				case 55707:
@@ -6134,6 +6576,8 @@ namespace UdonSharp.Video
 					return "좋아(Yes)";
 				case 28651:
 					return "좋아싫어해(スキキライ)";
+				case 77439:
+					return "좋아좋아(I Like You) (슬기로운의사생활시즌2 OST)";
 				case 33393:
 					return "좋은날(Good day)";
 				case 17078:
@@ -6180,6 +6624,10 @@ namespace UdonSharp.Video
 					return "착한여자(Good To You)";
 				case 53863:
 					return "찬란 (CHALLAN)";
+				case 80469:
+					return "찰나가영원이될때(The Eternal Moment)";
+				case 77540:
+					return "창귀(CHANGGWI)";
 				case 10062:
 					return "챔피언(Chapmion)";
 				case 37452:
@@ -6258,6 +6706,8 @@ namespace UdonSharp.Video
 					return "크레센도(Crescendo)";
 				case 36180:
 					return "크리스마스니까(Because It's Christmas)";
+				case 45776:
+					return "크리스마스잖아요(It's Christmas time)";
 				case 47050:
 					return "킬리만자로의표범(A leopard of Mt. Kilimanjaro)";
 				case 914:
@@ -6272,6 +6722,8 @@ namespace UdonSharp.Video
 					return "태어나줘서고마워(Thank you for my love)";
 				case 27979:
 					return "테러(テロル,Terror)";
+				case 29622:
+					return "퇴근버스(Natural Sorrow)";
 				case 9588:
 					return "파도(Wave)";
 				case 49495:
@@ -6330,6 +6782,8 @@ namespace UdonSharp.Video
 					return "합정역 5번출구(Hapjeong Station Exit NO.5) (놀면뭐하니?뽕포유 OST)";
 				case 18188:
 					return "해군가(Navy Song)";
+				case 80477:
+					return "해운대(HAEUNDAE)";
 				case 32071:
 					return "핸드폰애가(Hand Phone Monody)";
 				case 98957:
@@ -6352,6 +6806,8 @@ namespace UdonSharp.Video
 					return "호랑풍류가(Horangpungryuga) (나와호랑이님 OST)";
 				case 27964:
 					return "호시아이(ホシアイ)";
+				case 80802:
+					return "호우주의(WATERBOMB)";
 				case 76047:
 					return "혼술하고싶은밤(Lonely night)";
 				case 36254:
@@ -6372,6 +6828,8 @@ namespace UdonSharp.Video
 					return "활주(Run,滑走) (나루토 NARUTO OP)";
 				case 55696:
 					return "홧김에확(in a fit of anger)";
+				case 80716:
+					return "회전목마(MERRY GO ROUND)";
 				case 68350:
 					return "회회기담(廻廻奇譚) (呪術廻戦 주술회전 OP)";
 				case 45189:
@@ -6388,8 +6846,12 @@ namespace UdonSharp.Video
 					return "흔들리는꽃들속에서네샴푸향이느껴진거야(Your Shampoo Scent In the Flowers) (멜로가체질 OST)";
 				case 15528:
 					return "흔들어(Shake it) (개구리중사케로로 Sergeant Keroro OST)";
+				case 34131:
+					return "흔들어주세요(Shake it)";
 				case 10842:
 					return "희재(Hee Jae) (국화꽃향기 OST)";
+				case 16786:
+					return "흰눈(White Snow)";
 				case 34683:
 					return "흰수염고래(Blue whale)";
 				case 68308:
@@ -6406,6 +6868,8 @@ namespace UdonSharp.Video
 					return "Alcohol-Free";
 				case 35774:
 					return "All For You (응답하라1997 OST)";
+				case 99748:
+					return "All I Want";
 				case 20422:
 					return "All I Want For Christmas Is You";
 				case 22512:
@@ -6414,6 +6878,8 @@ namespace UdonSharp.Video
 					return "Always Awake";
 				case 23276:
 					return "Always Remember Us This Way (A Star Is Born 스타이즈본 OST)";
+				case 46701:
+					return "And July";
 				case 55692:
 					return "Are You Alone? 같은새벽,다른새벽";
 				case 76657:
@@ -6462,8 +6928,12 @@ namespace UdonSharp.Video
 					return "Blueming";
 				case 7745:
 					return "Bohemian rhapsody";
+				case 48124:
+					return "Bonnie& Clyde";
 				case 39223:
 					return "Born Hater";
+				case 80578:
+					return "Brand";
 				case 26758:
 					return "Brave heart (デジモンアドベンチャー 디지몬어드벤처 OST)";
 				case 47984:
@@ -6512,6 +6982,8 @@ namespace UdonSharp.Video
 					return "Come Back Home";
 				case 23351:
 					return "Comethru";
+				case 80866:
+					return "Counting Stars";
 				case 22725:
 					return "Counting Stars";
 				case 76146:
@@ -6530,6 +7002,10 @@ namespace UdonSharp.Video
 					return "DADDY!DADDY!DO! (かぐや様は告らせたい ~天才たちの恋愛頭脳戦~ 카구야님은고백받고싶어 ~천재들의연애두뇌전~ OP)";
 				case 23483:
 					return "Dance Monkey";
+				case 46958:
+					return "Dancing King";
+				case 24293:
+					return "DAUM";
 				case 48187:
 					return "Décalcomanie(데칼코마니)";
 				case 23396:
@@ -6562,6 +7038,8 @@ namespace UdonSharp.Video
 					return "Dynamite";
 				case 89419:
 					return "eight(에잇)";
+				case 80817:
+					return "ELEVEN";
 				case 6773:
 					return "Endless Rain";
 				case 7386:
@@ -6578,6 +7056,8 @@ namespace UdonSharp.Video
 					return "FANCY";
 				case 35073:
 					return "Fantastic Baby";
+				case 49964:
+					return "FANXY CHILD";
 				case 24166:
 					return "Feel Special";
 				case 31146:
@@ -6626,6 +7106,8 @@ namespace UdonSharp.Video
 					return "HAPPENING";
 				case 38384:
 					return "Happy";
+				case 30477:
+					return "Happy Together";
 				case 34200:
 					return "Hate You";
 				case 47169:
@@ -6696,6 +7178,8 @@ namespace UdonSharp.Video
 					return "Kiss Me More";
 				case 35556:
 					return "KOREA";
+				case 62425:
+					return "Last Christmas(라스트크리스마스)";
 				case 48351:
 					return "LAST DANCE";
 				case 27783:
@@ -6740,6 +7224,8 @@ namespace UdonSharp.Video
 					return "Love Day(2021) (바른연애길잡이 Romance 101 OST)";
 				case 22571:
 					return "Love Is An Open Door (Frozen 겨울왕국 OST)";
+				case 33381:
+					return "Love Love Love";
 				case 22340:
 					return "Love On Top";
 				case 24426:
@@ -6752,6 +7238,8 @@ namespace UdonSharp.Video
 					return "Lovesick Girls";
 				case 23611:
 					return "Mad at Disney";
+				case 98685:
+					return "Make Up";
 				case 23496:
 					return "Maniac";
 				case 46213:
@@ -6760,6 +7248,8 @@ namespace UdonSharp.Video
 					return "Marry You";
 				case 23430:
 					return "Memories";
+				case 96982:
+					return "Merry & Happy";
 				case 24617:
 					return "METEOR";
 				case 75523:
@@ -6768,6 +7258,8 @@ namespace UdonSharp.Video
 					return "Monster";
 				case 38593:
 					return "Mr.애매모호(Mr.Ambiguous)";
+				case 16587:
+					return "Must have love";
 				case 96268:
 					return "MY DARLING";
 				case 7736:
@@ -6810,6 +7302,8 @@ namespace UdonSharp.Video
 					return "Only my railgun (とある科学の超電磁砲 어떤과학의초전자포 OP)";
 				case 28660:
 					return "Orion(3月のライオン 3월의라이온 ED)";
+				case 80262:
+					return "Outsider";
 				case 23455:
 					return "Painkiller";
 				case 28699:
@@ -6840,6 +7334,8 @@ namespace UdonSharp.Video
 					return "Pretender";
 				case 31418:
 					return "Pretty Boy";
+				case 76401:
+					return "Promise (에픽세븐 Epic7 OST)";
 				case 24760:
 					return "Psycho";
 				case 46782:
@@ -6852,6 +7348,8 @@ namespace UdonSharp.Video
 					return "Rainy day";
 				case 46388:
 					return "RE-BYE";
+				case 80912:
+					return "RE:WIND(리와인드)";
 				case 45529:
 					return "Red Queen(레드퀸)";
 				case 77448:
@@ -6872,10 +7370,14 @@ namespace UdonSharp.Video
 					return "Run&Run";
 				case 22833:
 					return "Santa Tell Me";
+				case 80527:
+					return "Savage";
 				case 23616:
 					return "Savage Love (Laxed - Siren Beat)(BTS Remix)";
 				case 47016:
 					return "Scream";
+				case 96337:
+					return "SEARCH";
 				case 25206:
 					return "secret base ~君がくれたもの(당신이준것)~(あの日見た花の名前を僕達はまだ知らない 그날본꽃의이름을우리는아직모른다 ED)";
 				case 22766:
@@ -6886,6 +7388,8 @@ namespace UdonSharp.Video
 					return "Shallow (A Star Is Born OST)";
 				case 22966:
 					return "Shape Of You";
+				case 48978:
+					return "She's A Baby";
 				case 7095:
 					return "She's Gone";
 				case 23461:
@@ -6912,6 +7416,8 @@ namespace UdonSharp.Video
 					return "Stay Together";
 				case 48300:
 					return "Stay With Me";
+				case 80588:
+					return "strawberry moon";
 				case 23549:
 					return "Stuck With U";
 				case 22720:
@@ -6966,6 +7472,10 @@ namespace UdonSharp.Video
 					return "Voice Mail(보이스메일)";
 				case 75984:
 					return "VVS";
+				case 80393:
+					return "Waiting 4 U";
+				case 80685:
+					return "Wake Up";
 				case 23596:
 					return "WAP";
 				case 22682:
@@ -7019,7 +7529,6 @@ namespace UdonSharp.Video
 		public Boolean Request(string play_n)
 		{
 			n = play_n; //번호를 현재 재생에 저장
-
 			if (quest == true)
 			{
 				switch (play_n) //번호등록
@@ -13993,11 +14502,520 @@ namespace UdonSharp.Video
 					case "015147":
 						targetVideoPlayer.PlayVideo(q015147);
 						break;
+					case "16223":
+						targetVideoPlayer.PlayVideo(q16223);
+						break;
+					case "016223":
+						targetVideoPlayer.PlayVideo(q016223);
+						break;
+					case "80548":
+						targetVideoPlayer.PlayVideo(q80548);
+						break;
+					case "080548":
+						targetVideoPlayer.PlayVideo(q080548);
+						break;
+					case "80299":
+						targetVideoPlayer.PlayVideo(q80299);
+						break;
+					case "080299":
+						targetVideoPlayer.PlayVideo(q080299);
+						break;
+					case "80469":
+						targetVideoPlayer.PlayVideo(q80469);
+						break;
+					case "080469":
+						targetVideoPlayer.PlayVideo(q080469);
+						break;
+					case "80256":
+						targetVideoPlayer.PlayVideo(q80256);
+						break;
+					case "080256":
+						targetVideoPlayer.PlayVideo(q080256);
+						break;
+					case "80473":
+						targetVideoPlayer.PlayVideo(q80473);
+						break;
+					case "080473":
+						targetVideoPlayer.PlayVideo(q080473);
+						break;
+					case "80527":
+						targetVideoPlayer.PlayVideo(q80527);
+						break;
+					case "080527":
+						targetVideoPlayer.PlayVideo(q080527);
+						break;
+					case "80477":
+						targetVideoPlayer.PlayVideo(q80477);
+						break;
+					case "080477":
+						targetVideoPlayer.PlayVideo(q080477);
+						break;
+					case "80716":
+						targetVideoPlayer.PlayVideo(q80716);
+						break;
+					case "080716":
+						targetVideoPlayer.PlayVideo(q080716);
+						break;
+					case "80684":
+						targetVideoPlayer.PlayVideo(q80684);
+						break;
+					case "080684":
+						targetVideoPlayer.PlayVideo(q080684);
+						break;
+					case "34911":
+						targetVideoPlayer.PlayVideo(q34911);
+						break;
+					case "034911":
+						targetVideoPlayer.PlayVideo(q034911);
+						break;
+					case "46735":
+						targetVideoPlayer.PlayVideo(q46735);
+						break;
+					case "046735":
+						targetVideoPlayer.PlayVideo(q046735);
+						break;
+					case "80513":
+						targetVideoPlayer.PlayVideo(q80513);
+						break;
+					case "080513":
+						targetVideoPlayer.PlayVideo(q080513);
+						break;
+					case "32409":
+						targetVideoPlayer.PlayVideo(q32409);
+						break;
+					case "032409":
+						targetVideoPlayer.PlayVideo(q032409);
+						break;
+					case "80517":
+						targetVideoPlayer.PlayVideo(q80517);
+						break;
+					case "080517":
+						targetVideoPlayer.PlayVideo(q080517);
+						break;
+					case "14832":
+						targetVideoPlayer.PlayVideo(q14832);
+						break;
+					case "014832":
+						targetVideoPlayer.PlayVideo(q014832);
+						break;
+					case "4975":
+						targetVideoPlayer.PlayVideo(q4975);
+						break;
+					case "04975":
+						targetVideoPlayer.PlayVideo(q04975);
+						break;
+					case "80685":
+						targetVideoPlayer.PlayVideo(q80685);
+						break;
+					case "080685":
+						targetVideoPlayer.PlayVideo(q080685);
+						break;
+					case "46108":
+						targetVideoPlayer.PlayVideo(q46108);
+						break;
+					case "046108":
+						targetVideoPlayer.PlayVideo(q046108);
+						break;
+					case "37031":
+						targetVideoPlayer.PlayVideo(q37031);
+						break;
+					case "037031":
+						targetVideoPlayer.PlayVideo(q037031);
+						break;
+					case "29622":
+						targetVideoPlayer.PlayVideo(q29622);
+						break;
+					case "029622":
+						targetVideoPlayer.PlayVideo(q029622);
+						break;
+					case "24239":
+						targetVideoPlayer.PlayVideo(q24239);
+						break;
+					case "024239":
+						targetVideoPlayer.PlayVideo(q024239);
+						break;
+					case "77439":
+						targetVideoPlayer.PlayVideo(q77439);
+						break;
+					case "077439":
+						targetVideoPlayer.PlayVideo(q077439);
+						break;
+					case "24694":
+						targetVideoPlayer.PlayVideo(q24694);
+						break;
+					case "024694":
+						targetVideoPlayer.PlayVideo(q024694);
+						break;
+					case "97012":
+						targetVideoPlayer.PlayVideo(q97012);
+						break;
+					case "097012":
+						targetVideoPlayer.PlayVideo(q097012);
+						break;
+					case "96713":
+						targetVideoPlayer.PlayVideo(q96713);
+						break;
+					case "096713":
+						targetVideoPlayer.PlayVideo(q096713);
+						break;
+					case "11271":
+						targetVideoPlayer.PlayVideo(q11271);
+						break;
+					case "011271":
+						targetVideoPlayer.PlayVideo(q011271);
+						break;
+					case "8941":
+						targetVideoPlayer.PlayVideo(q8941);
+						break;
+					case "08941":
+						targetVideoPlayer.PlayVideo(q08941);
+						break;
+					case "80588":
+						targetVideoPlayer.PlayVideo(q80588);
+						break;
+					case "080588":
+						targetVideoPlayer.PlayVideo(q080588);
+						break;
+					case "33403":
+						targetVideoPlayer.PlayVideo(q33403);
+						break;
+					case "033403":
+						targetVideoPlayer.PlayVideo(q033403);
+						break;
+					case "48978":
+						targetVideoPlayer.PlayVideo(q48978);
+						break;
+					case "048978":
+						targetVideoPlayer.PlayVideo(q048978);
+						break;
+					case "98685":
+						targetVideoPlayer.PlayVideo(q98685);
+						break;
+					case "098685":
+						targetVideoPlayer.PlayVideo(q098685);
+						break;
+					case "80794":
+						targetVideoPlayer.PlayVideo(q80794);
+						break;
+					case "080794":
+						targetVideoPlayer.PlayVideo(q080794);
+						break;
+					case "77533":
+						targetVideoPlayer.PlayVideo(q77533);
+						break;
+					case "077533":
+						targetVideoPlayer.PlayVideo(q077533);
+						break;
+					case "77540":
+						targetVideoPlayer.PlayVideo(q77540);
+						break;
+					case "077540":
+						targetVideoPlayer.PlayVideo(q077540);
+						break;
+					case "75959":
+						targetVideoPlayer.PlayVideo(q75959);
+						break;
+					case "075959":
+						targetVideoPlayer.PlayVideo(q075959);
+						break;
+					case "6008":
+						targetVideoPlayer.PlayVideo(q6008);
+						break;
+					case "06008":
+						targetVideoPlayer.PlayVideo(q06008);
+						break;
+					case "6002":
+						targetVideoPlayer.PlayVideo(q6002);
+						break;
+					case "06002":
+						targetVideoPlayer.PlayVideo(q06002);
+						break;
+					case "34859":
+						targetVideoPlayer.PlayVideo(q34859);
+						break;
+					case "034859":
+						targetVideoPlayer.PlayVideo(q034859);
+						break;
+					case "46645":
+						targetVideoPlayer.PlayVideo(q46645);
+						break;
+					case "046645":
+						targetVideoPlayer.PlayVideo(q046645);
+						break;
+					case "80393":
+						targetVideoPlayer.PlayVideo(q80393);
+						break;
+					case "080393":
+						targetVideoPlayer.PlayVideo(q080393);
+						break;
+					case "80383":
+						targetVideoPlayer.PlayVideo(q80383);
+						break;
+					case "080383":
+						targetVideoPlayer.PlayVideo(q080383);
+						break;
+					case "80262":
+						targetVideoPlayer.PlayVideo(q80262);
+						break;
+					case "080262":
+						targetVideoPlayer.PlayVideo(q080262);
+						break;
+					case "16587":
+						targetVideoPlayer.PlayVideo(q16587);
+						break;
+					case "016587":
+						targetVideoPlayer.PlayVideo(q016587);
+						break;
+					case "30477":
+						targetVideoPlayer.PlayVideo(q30477);
+						break;
+					case "030477":
+						targetVideoPlayer.PlayVideo(q030477);
+						break;
+					case "33381":
+						targetVideoPlayer.PlayVideo(q33381);
+						break;
+					case "033381":
+						targetVideoPlayer.PlayVideo(q033381);
+						break;
+					case "99748":
+						targetVideoPlayer.PlayVideo(q99748);
+						break;
+					case "099748":
+						targetVideoPlayer.PlayVideo(q099748);
+						break;
+					case "96982":
+						targetVideoPlayer.PlayVideo(q96982);
+						break;
+					case "096982":
+						targetVideoPlayer.PlayVideo(q096982);
+						break;
+					case "39404":
+						targetVideoPlayer.PlayVideo(q39404);
+						break;
+					case "039404":
+						targetVideoPlayer.PlayVideo(q039404);
+						break;
+					case "45776":
+						targetVideoPlayer.PlayVideo(q45776);
+						break;
+					case "045776":
+						targetVideoPlayer.PlayVideo(q045776);
+						break;
+					case "80756":
+						targetVideoPlayer.PlayVideo(q80756);
+						break;
+					case "080756":
+						targetVideoPlayer.PlayVideo(q080756);
+						break;
+					case "80757":
+						targetVideoPlayer.PlayVideo(q80757);
+						break;
+					case "080757":
+						targetVideoPlayer.PlayVideo(q080757);
+						break;
+					case "80755":
+						targetVideoPlayer.PlayVideo(q80755);
+						break;
+					case "080755":
+						targetVideoPlayer.PlayVideo(q080755);
+						break;
+					case "80636":
+						targetVideoPlayer.PlayVideo(q80636);
+						break;
+					case "080636":
+						targetVideoPlayer.PlayVideo(q080636);
+						break;
+					case "80692":
+						targetVideoPlayer.PlayVideo(q80692);
+						break;
+					case "080692":
+						targetVideoPlayer.PlayVideo(q080692);
+						break;
+					case "80688":
+						targetVideoPlayer.PlayVideo(q80688);
+						break;
+					case "080688":
+						targetVideoPlayer.PlayVideo(q080688);
+						break;
+					case "80802":
+						targetVideoPlayer.PlayVideo(q80802);
+						break;
+					case "080802":
+						targetVideoPlayer.PlayVideo(q080802);
+						break;
+					case "24285":
+						targetVideoPlayer.PlayVideo(q24285);
+						break;
+					case "024285":
+						targetVideoPlayer.PlayVideo(q024285);
+						break;
+					case "24293":
+						targetVideoPlayer.PlayVideo(q24293);
+						break;
+					case "024293":
+						targetVideoPlayer.PlayVideo(q024293);
+						break;
+					case "46302":
+						targetVideoPlayer.PlayVideo(q46302);
+						break;
+					case "046302":
+						targetVideoPlayer.PlayVideo(q046302);
+						break;
+					case "89123":
+						targetVideoPlayer.PlayVideo(q89123);
+						break;
+					case "089123":
+						targetVideoPlayer.PlayVideo(q089123);
+						break;
+					case "39814":
+						targetVideoPlayer.PlayVideo(q39814);
+						break;
+					case "039814":
+						targetVideoPlayer.PlayVideo(q039814);
+						break;
+					case "28534":
+						targetVideoPlayer.PlayVideo(q28534);
+						break;
+					case "028534":
+						targetVideoPlayer.PlayVideo(q028534);
+						break;
+					case "34131":
+						targetVideoPlayer.PlayVideo(q34131);
+						break;
+					case "034131":
+						targetVideoPlayer.PlayVideo(q034131);
+						break;
+					case "80912":
+						targetVideoPlayer.PlayVideo(q80912);
+						break;
+					case "080912":
+						targetVideoPlayer.PlayVideo(q080912);
+						break;
+					case "62425":
+						targetVideoPlayer.PlayVideo(q62425);
+						break;
+					case "062425":
+						targetVideoPlayer.PlayVideo(q062425);
+						break;
+					case "24000":
+						targetVideoPlayer.PlayVideo(q24000);
+						break;
+					case "024000":
+						targetVideoPlayer.PlayVideo(q024000);
+						break;
+					case "80913":
+						targetVideoPlayer.PlayVideo(q80913);
+						break;
+					case "080913":
+						targetVideoPlayer.PlayVideo(q080913);
+						break;
+					case "80869":
+						targetVideoPlayer.PlayVideo(q80869);
+						break;
+					case "080869":
+						targetVideoPlayer.PlayVideo(q080869);
+						break;
+					case "80434":
+						targetVideoPlayer.PlayVideo(q80434);
+						break;
+					case "080434":
+						targetVideoPlayer.PlayVideo(q080434);
+						break;
+					case "80831":
+						targetVideoPlayer.PlayVideo(q80831);
+						break;
+					case "080831":
+						targetVideoPlayer.PlayVideo(q080831);
+						break;
+					case "15128":
+						targetVideoPlayer.PlayVideo(q15128);
+						break;
+					case "015128":
+						targetVideoPlayer.PlayVideo(q015128);
+						break;
+					case "2632":
+						targetVideoPlayer.PlayVideo(q2632);
+						break;
+					case "02632":
+						targetVideoPlayer.PlayVideo(q02632);
+						break;
+					case "46701":
+						targetVideoPlayer.PlayVideo(q46701);
+						break;
+					case "046701":
+						targetVideoPlayer.PlayVideo(q046701);
+						break;
+					case "48124":
+						targetVideoPlayer.PlayVideo(q48124);
+						break;
+					case "048124":
+						targetVideoPlayer.PlayVideo(q048124);
+						break;
+					case "49964":
+						targetVideoPlayer.PlayVideo(q49964);
+						break;
+					case "049964":
+						targetVideoPlayer.PlayVideo(q049964);
+						break;
+					case "29282":
+						targetVideoPlayer.PlayVideo(q29282);
+						break;
+					case "029282":
+						targetVideoPlayer.PlayVideo(q029282);
+						break;
+					case "96337":
+						targetVideoPlayer.PlayVideo(q96337);
+						break;
+					case "096337":
+						targetVideoPlayer.PlayVideo(q096337);
+						break;
+					case "46958":
+						targetVideoPlayer.PlayVideo(q46958);
+						break;
+					case "046958":
+						targetVideoPlayer.PlayVideo(q046958);
+						break;
+					case "24001":
+						targetVideoPlayer.PlayVideo(q24001);
+						break;
+					case "024001":
+						targetVideoPlayer.PlayVideo(q024001);
+						break;
+					case "76401":
+						targetVideoPlayer.PlayVideo(q76401);
+						break;
+					case "076401":
+						targetVideoPlayer.PlayVideo(q076401);
+						break;
+					case "80578":
+						targetVideoPlayer.PlayVideo(q80578);
+						break;
+					case "080578":
+						targetVideoPlayer.PlayVideo(q080578);
+						break;
+					case "16786":
+						targetVideoPlayer.PlayVideo(q16786);
+						break;
+					case "016786":
+						targetVideoPlayer.PlayVideo(q016786);
+						break;
+					case "80817":
+						targetVideoPlayer.PlayVideo(q80817);
+						break;
+					case "080817":
+						targetVideoPlayer.PlayVideo(q080817);
+						break;
+					case "80866":
+						targetVideoPlayer.PlayVideo(q80866);
+						break;
+					case "080866":
+						targetVideoPlayer.PlayVideo(q080866);
+						break;
 					default:
 						_input = "Error";
 						return false; //번호가 없으면 false 리턴
 				}
-				Status();
 				return true; //재생 됐으면 true 리턴
 			}
 			else
@@ -20973,64 +21991,559 @@ namespace UdonSharp.Video
 					case "015147":
 						targetVideoPlayer.PlayVideo(n015147);
 						break;
+					case "16223":
+						targetVideoPlayer.PlayVideo(n16223);
+						break;
+					case "016223":
+						targetVideoPlayer.PlayVideo(n016223);
+						break;
+					case "80548":
+						targetVideoPlayer.PlayVideo(n80548);
+						break;
+					case "080548":
+						targetVideoPlayer.PlayVideo(n080548);
+						break;
+					case "80299":
+						targetVideoPlayer.PlayVideo(n80299);
+						break;
+					case "080299":
+						targetVideoPlayer.PlayVideo(n080299);
+						break;
+					case "80469":
+						targetVideoPlayer.PlayVideo(n80469);
+						break;
+					case "080469":
+						targetVideoPlayer.PlayVideo(n080469);
+						break;
+					case "80256":
+						targetVideoPlayer.PlayVideo(n80256);
+						break;
+					case "080256":
+						targetVideoPlayer.PlayVideo(n080256);
+						break;
+					case "80473":
+						targetVideoPlayer.PlayVideo(n80473);
+						break;
+					case "080473":
+						targetVideoPlayer.PlayVideo(n080473);
+						break;
+					case "80527":
+						targetVideoPlayer.PlayVideo(n80527);
+						break;
+					case "080527":
+						targetVideoPlayer.PlayVideo(n080527);
+						break;
+					case "80477":
+						targetVideoPlayer.PlayVideo(n80477);
+						break;
+					case "080477":
+						targetVideoPlayer.PlayVideo(n080477);
+						break;
+					case "80716":
+						targetVideoPlayer.PlayVideo(n80716);
+						break;
+					case "080716":
+						targetVideoPlayer.PlayVideo(n080716);
+						break;
+					case "80684":
+						targetVideoPlayer.PlayVideo(n80684);
+						break;
+					case "080684":
+						targetVideoPlayer.PlayVideo(n080684);
+						break;
+					case "34911":
+						targetVideoPlayer.PlayVideo(n34911);
+						break;
+					case "034911":
+						targetVideoPlayer.PlayVideo(n034911);
+						break;
+					case "46735":
+						targetVideoPlayer.PlayVideo(n46735);
+						break;
+					case "046735":
+						targetVideoPlayer.PlayVideo(n046735);
+						break;
+					case "80513":
+						targetVideoPlayer.PlayVideo(n80513);
+						break;
+					case "080513":
+						targetVideoPlayer.PlayVideo(n080513);
+						break;
+					case "32409":
+						targetVideoPlayer.PlayVideo(n32409);
+						break;
+					case "032409":
+						targetVideoPlayer.PlayVideo(n032409);
+						break;
+					case "80517":
+						targetVideoPlayer.PlayVideo(n80517);
+						break;
+					case "080517":
+						targetVideoPlayer.PlayVideo(n080517);
+						break;
+					case "14832":
+						targetVideoPlayer.PlayVideo(n14832);
+						break;
+					case "014832":
+						targetVideoPlayer.PlayVideo(n014832);
+						break;
+					case "4975":
+						targetVideoPlayer.PlayVideo(n4975);
+						break;
+					case "04975":
+						targetVideoPlayer.PlayVideo(n04975);
+						break;
+					case "80685":
+						targetVideoPlayer.PlayVideo(n80685);
+						break;
+					case "080685":
+						targetVideoPlayer.PlayVideo(n080685);
+						break;
+					case "46108":
+						targetVideoPlayer.PlayVideo(n46108);
+						break;
+					case "046108":
+						targetVideoPlayer.PlayVideo(n046108);
+						break;
+					case "37031":
+						targetVideoPlayer.PlayVideo(n37031);
+						break;
+					case "037031":
+						targetVideoPlayer.PlayVideo(n037031);
+						break;
+					case "29622":
+						targetVideoPlayer.PlayVideo(n29622);
+						break;
+					case "029622":
+						targetVideoPlayer.PlayVideo(n029622);
+						break;
+					case "24239":
+						targetVideoPlayer.PlayVideo(n24239);
+						break;
+					case "024239":
+						targetVideoPlayer.PlayVideo(n024239);
+						break;
+					case "77439":
+						targetVideoPlayer.PlayVideo(n77439);
+						break;
+					case "077439":
+						targetVideoPlayer.PlayVideo(n077439);
+						break;
+					case "24694":
+						targetVideoPlayer.PlayVideo(n24694);
+						break;
+					case "024694":
+						targetVideoPlayer.PlayVideo(n024694);
+						break;
+					case "97012":
+						targetVideoPlayer.PlayVideo(n97012);
+						break;
+					case "097012":
+						targetVideoPlayer.PlayVideo(n097012);
+						break;
+					case "96713":
+						targetVideoPlayer.PlayVideo(n96713);
+						break;
+					case "096713":
+						targetVideoPlayer.PlayVideo(n096713);
+						break;
+					case "11271":
+						targetVideoPlayer.PlayVideo(n11271);
+						break;
+					case "011271":
+						targetVideoPlayer.PlayVideo(n011271);
+						break;
+					case "8941":
+						targetVideoPlayer.PlayVideo(n8941);
+						break;
+					case "08941":
+						targetVideoPlayer.PlayVideo(n08941);
+						break;
+					case "80588":
+						targetVideoPlayer.PlayVideo(n80588);
+						break;
+					case "080588":
+						targetVideoPlayer.PlayVideo(n080588);
+						break;
+					case "33403":
+						targetVideoPlayer.PlayVideo(n33403);
+						break;
+					case "033403":
+						targetVideoPlayer.PlayVideo(n033403);
+						break;
+					case "48978":
+						targetVideoPlayer.PlayVideo(n48978);
+						break;
+					case "048978":
+						targetVideoPlayer.PlayVideo(n048978);
+						break;
+					case "98685":
+						targetVideoPlayer.PlayVideo(n98685);
+						break;
+					case "098685":
+						targetVideoPlayer.PlayVideo(n098685);
+						break;
+					case "80794":
+						targetVideoPlayer.PlayVideo(n80794);
+						break;
+					case "080794":
+						targetVideoPlayer.PlayVideo(n080794);
+						break;
+					case "77533":
+						targetVideoPlayer.PlayVideo(n77533);
+						break;
+					case "077533":
+						targetVideoPlayer.PlayVideo(n077533);
+						break;
+					case "77540":
+						targetVideoPlayer.PlayVideo(n77540);
+						break;
+					case "077540":
+						targetVideoPlayer.PlayVideo(n077540);
+						break;
+					case "75959":
+						targetVideoPlayer.PlayVideo(n75959);
+						break;
+					case "075959":
+						targetVideoPlayer.PlayVideo(n075959);
+						break;
+					case "6008":
+						targetVideoPlayer.PlayVideo(n6008);
+						break;
+					case "06008":
+						targetVideoPlayer.PlayVideo(n06008);
+						break;
+					case "6002":
+						targetVideoPlayer.PlayVideo(n6002);
+						break;
+					case "06002":
+						targetVideoPlayer.PlayVideo(n06002);
+						break;
+					case "34859":
+						targetVideoPlayer.PlayVideo(n34859);
+						break;
+					case "034859":
+						targetVideoPlayer.PlayVideo(n034859);
+						break;
+					case "46645":
+						targetVideoPlayer.PlayVideo(n46645);
+						break;
+					case "046645":
+						targetVideoPlayer.PlayVideo(n046645);
+						break;
+					case "80393":
+						targetVideoPlayer.PlayVideo(n80393);
+						break;
+					case "080393":
+						targetVideoPlayer.PlayVideo(n080393);
+						break;
+					case "80383":
+						targetVideoPlayer.PlayVideo(n80383);
+						break;
+					case "080383":
+						targetVideoPlayer.PlayVideo(n080383);
+						break;
+					case "80262":
+						targetVideoPlayer.PlayVideo(n80262);
+						break;
+					case "080262":
+						targetVideoPlayer.PlayVideo(n080262);
+						break;
+					case "16587":
+						targetVideoPlayer.PlayVideo(n16587);
+						break;
+					case "016587":
+						targetVideoPlayer.PlayVideo(n016587);
+						break;
+					case "30477":
+						targetVideoPlayer.PlayVideo(n30477);
+						break;
+					case "030477":
+						targetVideoPlayer.PlayVideo(n030477);
+						break;
+					case "33381":
+						targetVideoPlayer.PlayVideo(n33381);
+						break;
+					case "033381":
+						targetVideoPlayer.PlayVideo(n033381);
+						break;
+					case "99748":
+						targetVideoPlayer.PlayVideo(n99748);
+						break;
+					case "099748":
+						targetVideoPlayer.PlayVideo(n099748);
+						break;
+					case "96982":
+						targetVideoPlayer.PlayVideo(n96982);
+						break;
+					case "096982":
+						targetVideoPlayer.PlayVideo(n096982);
+						break;
+					case "39404":
+						targetVideoPlayer.PlayVideo(n39404);
+						break;
+					case "039404":
+						targetVideoPlayer.PlayVideo(n039404);
+						break;
+					case "45776":
+						targetVideoPlayer.PlayVideo(n45776);
+						break;
+					case "045776":
+						targetVideoPlayer.PlayVideo(n045776);
+						break;
+					case "80756":
+						targetVideoPlayer.PlayVideo(n80756);
+						break;
+					case "080756":
+						targetVideoPlayer.PlayVideo(n080756);
+						break;
+					case "80757":
+						targetVideoPlayer.PlayVideo(n80757);
+						break;
+					case "080757":
+						targetVideoPlayer.PlayVideo(n080757);
+						break;
+					case "80755":
+						targetVideoPlayer.PlayVideo(n80755);
+						break;
+					case "080755":
+						targetVideoPlayer.PlayVideo(n080755);
+						break;
+					case "80636":
+						targetVideoPlayer.PlayVideo(n80636);
+						break;
+					case "080636":
+						targetVideoPlayer.PlayVideo(n080636);
+						break;
+					case "80692":
+						targetVideoPlayer.PlayVideo(n80692);
+						break;
+					case "080692":
+						targetVideoPlayer.PlayVideo(n080692);
+						break;
+					case "80688":
+						targetVideoPlayer.PlayVideo(n80688);
+						break;
+					case "080688":
+						targetVideoPlayer.PlayVideo(n080688);
+						break;
+					case "80802":
+						targetVideoPlayer.PlayVideo(n80802);
+						break;
+					case "080802":
+						targetVideoPlayer.PlayVideo(n080802);
+						break;
+					case "24285":
+						targetVideoPlayer.PlayVideo(n24285);
+						break;
+					case "024285":
+						targetVideoPlayer.PlayVideo(n024285);
+						break;
+					case "24293":
+						targetVideoPlayer.PlayVideo(n24293);
+						break;
+					case "024293":
+						targetVideoPlayer.PlayVideo(n024293);
+						break;
+					case "46302":
+						targetVideoPlayer.PlayVideo(n46302);
+						break;
+					case "046302":
+						targetVideoPlayer.PlayVideo(n046302);
+						break;
+					case "89123":
+						targetVideoPlayer.PlayVideo(n89123);
+						break;
+					case "089123":
+						targetVideoPlayer.PlayVideo(n089123);
+						break;
+					case "39814":
+						targetVideoPlayer.PlayVideo(n39814);
+						break;
+					case "039814":
+						targetVideoPlayer.PlayVideo(n039814);
+						break;
+					case "28534":
+						targetVideoPlayer.PlayVideo(n28534);
+						break;
+					case "028534":
+						targetVideoPlayer.PlayVideo(n028534);
+						break;
+					case "34131":
+						targetVideoPlayer.PlayVideo(n34131);
+						break;
+					case "034131":
+						targetVideoPlayer.PlayVideo(n034131);
+						break;
+					case "80912":
+						targetVideoPlayer.PlayVideo(n80912);
+						break;
+					case "080912":
+						targetVideoPlayer.PlayVideo(n080912);
+						break;
+					case "62425":
+						targetVideoPlayer.PlayVideo(n62425);
+						break;
+					case "062425":
+						targetVideoPlayer.PlayVideo(n062425);
+						break;
+					case "24000":
+						targetVideoPlayer.PlayVideo(n24000);
+						break;
+					case "024000":
+						targetVideoPlayer.PlayVideo(n024000);
+						break;
+					case "80913":
+						targetVideoPlayer.PlayVideo(n80913);
+						break;
+					case "080913":
+						targetVideoPlayer.PlayVideo(n080913);
+						break;
+					case "80869":
+						targetVideoPlayer.PlayVideo(n80869);
+						break;
+					case "080869":
+						targetVideoPlayer.PlayVideo(n080869);
+						break;
+					case "80434":
+						targetVideoPlayer.PlayVideo(n80434);
+						break;
+					case "080434":
+						targetVideoPlayer.PlayVideo(n080434);
+						break;
+					case "80831":
+						targetVideoPlayer.PlayVideo(n80831);
+						break;
+					case "080831":
+						targetVideoPlayer.PlayVideo(n080831);
+						break;
+					case "15128":
+						targetVideoPlayer.PlayVideo(n15128);
+						break;
+					case "015128":
+						targetVideoPlayer.PlayVideo(n015128);
+						break;
+					case "2632":
+						targetVideoPlayer.PlayVideo(n2632);
+						break;
+					case "02632":
+						targetVideoPlayer.PlayVideo(n02632);
+						break;
+					case "46701":
+						targetVideoPlayer.PlayVideo(n46701);
+						break;
+					case "046701":
+						targetVideoPlayer.PlayVideo(n046701);
+						break;
+					case "48124":
+						targetVideoPlayer.PlayVideo(n48124);
+						break;
+					case "048124":
+						targetVideoPlayer.PlayVideo(n048124);
+						break;
+					case "49964":
+						targetVideoPlayer.PlayVideo(n49964);
+						break;
+					case "049964":
+						targetVideoPlayer.PlayVideo(n049964);
+						break;
+					case "29282":
+						targetVideoPlayer.PlayVideo(n29282);
+						break;
+					case "029282":
+						targetVideoPlayer.PlayVideo(n029282);
+						break;
+					case "96337":
+						targetVideoPlayer.PlayVideo(n96337);
+						break;
+					case "096337":
+						targetVideoPlayer.PlayVideo(n096337);
+						break;
+					case "46958":
+						targetVideoPlayer.PlayVideo(n46958);
+						break;
+					case "046958":
+						targetVideoPlayer.PlayVideo(n046958);
+						break;
+					case "24001":
+						targetVideoPlayer.PlayVideo(n24001);
+						break;
+					case "024001":
+						targetVideoPlayer.PlayVideo(n024001);
+						break;
+					case "76401":
+						targetVideoPlayer.PlayVideo(n76401);
+						break;
+					case "076401":
+						targetVideoPlayer.PlayVideo(n076401);
+						break;
+					case "80578":
+						targetVideoPlayer.PlayVideo(n80578);
+						break;
+					case "080578":
+						targetVideoPlayer.PlayVideo(n080578);
+						break;
+					case "16786":
+						targetVideoPlayer.PlayVideo(n16786);
+						break;
+					case "016786":
+						targetVideoPlayer.PlayVideo(n016786);
+						break;
+					case "80817":
+						targetVideoPlayer.PlayVideo(n80817);
+						break;
+					case "080817":
+						targetVideoPlayer.PlayVideo(n080817);
+						break;
+					case "80866":
+						targetVideoPlayer.PlayVideo(n80866);
+						break;
+					case "080866":
+						targetVideoPlayer.PlayVideo(n080866);
+						break;
 					default:
 						_input = "Error";
 						return false; //번호가 없으면 false 리턴
 				}
-				Status(play_n);
 				return true; //재생 됐으면 true 리턴
 			}
 		}
 		#endregion
-		
-		public void Status(string play_n)
-        {
-			if (play_n == "0") //노래방 배경이면
-			{
-				playing = false;
-				st = "환영합니다! 에케 노래방입니다. Welcome!";
-			}
-			else if (play_n == "")
-			{
-				playing = true;
-				st = "URL 재생중입니다. Custom URL Playing.";
-			}
-			else
-			{
-				playing = true;
-				st = play_n + " - " + songname(n);
-			}
-			RequestSerialization();
-		}
 
 		public void Enter() //예약 버튼
 		{
 			int check;
 			bool checkr = Int32.TryParse(_input, out check);
 
-			if (!checkr) _input = "Notnum"; //숫자가 아니면
-			else if (_input == "1015") //초기화 코드
+			//숫자가 아니면
+			if (!checkr) {
+				_input = "Notnum";
+				return;
+			}
+			//초기화 코드
+			else if (_input == "1015")
 			{
-				Reset();
 				_input = "Reset";
+				Reset();
+				return;
 			}
 			else if (_input == "00") //00번 입력시 즉시예약가능모드
 			{
 				playing = false;
 				_input = "Q!";
 			}
+			//이름이 등록되지 않았으면
+			else if (songname(_input) == "")
+			{
+				_input = "Error";
+				return;
+			}
 			else if (playing == false) //재생중이 아니면
 			{
 				if (Request(_input)) _input = "Play"; //예약된 노래가 재생되면
 			}
-			else if (playing == true) //재생중이면
+			else if (playing == true) //재생중이고
 			{
-				if (songname(_input) == "") //노래 이름 목록에 존재하지 않으면 실패 반환
-				{
-					_input = "Error";
-					return;
-				}
-
 				qq++;
 
 				if (q1 == "") //예약이 비었으면
@@ -21101,7 +22614,7 @@ namespace UdonSharp.Video
 														q10 = _input;
 														_input = "Queue";
 													}
-													else //예약이 꽉 찼으면
+													else
 													{
 														_input = "Full";
 														qq--;
@@ -21130,13 +22643,13 @@ namespace UdonSharp.Video
 		}
 
 		public void Mode()
-        {
+		{
 			if (quest == false)
-            {
+			{
 				quest = true;
 				mode_text.text = "Quest together";
 			}
-            else
+			else
 			{
 				quest = false;
 				mode_text.text = "PC only";
@@ -21156,7 +22669,7 @@ namespace UdonSharp.Video
 				{
 					Reset();
 				}
-				else Queue(); //예약된 목록이 있으면 불러오기
+				else OnUSharpVideoEnd(); //예약된 목록이 있으면 불러오기
 			}
 		}
 
@@ -21182,31 +22695,46 @@ namespace UdonSharp.Video
 
 		public void OnUSharpVideoError() //영상 오류나면
 		{
-			playing = false;
-			Queue(); //다음 재생목록 실행
+			//playing = false;
+			OnUSharpVideoEnd(); //다음 재생목록 실행
 		}
 
 		public void OnUSharpVideoPause() //영상 일시정지
 		{
-			playing = false;
+			//playing = false;
 		}
 
 		public void OnUSharpVideoUnpause() //영상 일시정지 해제
 		{
-			playing = true;
+			//playing = true;
 		}
 
 		public void OnUSharpVideoStop() //영상 멈추면
 		{
-			playing = false;
+			//playing = false;
 		}
 
 		public void OnUSharpVideoLoadStart() //영상 로딩시
 		{
-			playing = true;
+			if (n == "0") //노래방 배경이면
+			{
+				playing = false;
+				st = "환영합니다! 에케 노래방입니다. Welcome!";
+			}
+			else if (n == "")
+			{
+				playing = true;
+				st = "URL 재생중입니다. Custom URL Playing.";
+			}
+			else
+			{
+				playing = true;
+				st = n + " - " + songname(n);
+			}
+			RequestSerialization();
 		}
-		public void Queue()
-        {
+		public void OnUSharpVideoEnd() //영상이 끝나면(재생목록 구현)
+		{
 			vote = 3; //넘기기 초기화
 
 			if (q1 != "") //예약된 번호가 있으면
@@ -21228,12 +22756,13 @@ namespace UdonSharp.Video
 
 				if (!Request(n)) //없는 번호라면
 				{
-					Queue(); //다시 실행
+					OnUSharpVideoEnd(); //다시 실행
 					return;
 				}
 			}
 			else if (q1 == "") //예약된 번호가 없으면
 			{
+				playing = false;
 				Reset(); //예약목록 초기화
 				st = "선곡해주세요! Please choose a song!";
 			}
@@ -21243,11 +22772,6 @@ namespace UdonSharp.Video
 				qm = "+" + qq;
 			}
 			RequestSerialization(); //Udon 동기화
-		}
-		public void OnUSharpVideoEnd() //영상이 끝나면(재생목록 구현)
-		{
-			playing = false;
-			Queue();
 		}
 
 		public void n_button(int number)
