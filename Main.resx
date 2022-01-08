@@ -124,35 +124,24 @@
 문자열삽입위치</value>
   </data>
   <data name="TextBox_Request.Text" xml:space="preserve">
-    <value>		public Boolean Request(string play_n)
-		{
-			n = play_n; //번호를 현재 재생에 저장
-			if (quest == true)
-			{
-				switch (play_n) //번호등록
-				{
-					case "0":
-						targetVideoPlayer.PlayVideo(q0);
-						break;
-문자열삽입위치1					default:
-						_input = "Error";
-						return false; //번호가 없으면 false 리턴
-				}
-				return true; //재생 됐으면 true 리턴
-			}
-			else
-			{
-				switch (play_n) //번호등록
-				{
-					case "0":
-						targetVideoPlayer.PlayVideo(n0);
-						break;
-문자열삽입위치2					default:
-						_input = "Error";
-						return false; //번호가 없으면 false 리턴
-				}
-				return true; //재생 됐으면 true 리턴
-			}
-		}</value>
+    <value>    public void Request(string play_n, forcequ = false)
+    {
+        switch (play_n) //번호등록
+        {
+            case "0":
+                if (_quest) addURL(q0);
+                else addURL(n0);
+                Debug.Log("에케 디버그: Request: 0");
+                break;
+            문자열삽입위치
+            default:
+                _input = "Error";
+                Debug.Log("에케 디버그: Request: 번호없음: " + play_n);
+                break;
+        }
+        Debug.Log("에케 디버그: Request: 예약완료: " + play_n);
+        force = false;
+        return;
+    }</value>
   </data>
 </root>
