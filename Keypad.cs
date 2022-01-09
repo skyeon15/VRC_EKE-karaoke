@@ -24,9 +24,9 @@ public class Keypad : UdonSharpBehaviour
     private string _input = String.Empty, _now = String.Empty;
 
     [UdonSynced]
-    string _st = "환영합니다! 에케 노래방입니다. Welcome!";
+    bool _quest = false, _isPlaying = false, force = false;
     int _vote = 3;
-    bool _quest = false, _isPlaying = true, force = false;
+    string _st = "환영합니다! 에케 노래방입니다. Welcome!";
     public Text mode_text;
     public Text vote_text;
 
@@ -39,6 +39,7 @@ public class Keypad : UdonSharpBehaviour
     {
         _isPlaying = isPlaying;
         Debug.Log("에케 디버그: Player Hook: isPlaying: " + isPlaying);
+        RequestSerialization(); //Udon 동기화
     }
 
     private void Start()
