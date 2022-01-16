@@ -26,7 +26,7 @@ namespace EKE_karaoke
             Elements datas = doc.Select("tbody tr");
 
             int i = 0;
-            string num, name, url, vrcurl = "", songname = "", request1 = "", request2 = "";
+            string num, name, singer, url, vrcurl = String.Empty, songname = String.Empty, request1 = String.Empty, request2 = String.Empty;
 
             foreach (Element data in datas)
             {
@@ -35,6 +35,8 @@ namespace EKE_karaoke
                 num = data.Select("td").Eq(0).Text;
                 url = data.Select("td").Eq(1).Text;
                 name = data.Select("td").Eq(2).Text;
+                singer = data.Select("td").Eq(3).Text;
+
                 if (num != "")
                 {
                     vrcurl+= $"VRCUrl n{num} = new VRCUrl(\"{url}\");\n" +
@@ -42,12 +44,14 @@ namespace EKE_karaoke
                     request1 += $"case \"{num}\":\n" +
                     $"if (_quest) addURL(q{num});\n" +
                     $"else addURL(n{num});\n" +
-                    $"Debug.Log($\"에케 디버그: Request: {num}\");\n" +
+                    $"Debug.Log($\"에케 디버그: Request: {num} - {name}\");\n" +
                     $"break;\n";
-                    /*
-                    request2 += $"\t\t\t\t\tcase \"{num}\":" +
-                        $"\n\t\t\t\t\t\twolfePlayerController.AppendToQueue(n{num});" +
-                        $"\n\t\t\t\t\t\tbreak;\n";*/
+
+                    url = url.Replace("https://t-ne.x0.to/?url=", "").Replace("https://www.youtube.com/watch?v=", "")
+                        .Replace("https://youtu.be/", "").Replace("https://youtube.com/watch?v=", "");
+                    url = url.Split('?')[0].Split('&')[0];
+                    songname += $"case \"{url}\":\n" +
+                        $"return \"[{num}] {name.Replace("_", "")} - {singer}\";\n";
                 }
             }
             /*
@@ -73,7 +77,7 @@ namespace EKE_karaoke
             TextBox_Songname.Text = TextBox_Songname.Text.Replace("문자열삽입위치", songname);
             TextBox_Request.Text = TextBox_Request.Text.Replace("문자열삽입위치", request1);
             //TextBox_Request.Text = TextBox_Request.Text.Replace("문자열삽입위치2", request2);
-            Result.Text = $"#region 노래등록\n{TextBox_VRCUrl.Text}\n{TextBox_Request.Text}\n#endregion";
+            Result.Text = $"#region 노래등록\n{TextBox_VRCUrl.Text}\n{TextBox_Request.Text}\n{TextBox_Songname.Text}\n#endregion";
         }
     }
 }

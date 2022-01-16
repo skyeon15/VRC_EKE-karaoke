@@ -47,7 +47,7 @@ namespace EKE_karaoke
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(365, 13);
+            this.button1.Location = new System.Drawing.Point(361, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 31);
             this.button1.TabIndex = 1;
@@ -61,8 +61,7 @@ namespace EKE_karaoke
             this.TextBox_Songname.Name = "TextBox_Songname";
             this.TextBox_Songname.Size = new System.Drawing.Size(298, 369);
             this.TextBox_Songname.TabIndex = 0;
-            this.TextBox_Songname.Text = "\t\tpublic string songname(string num)\n\t\t{\n\t\t\tint num_i = Convert.ToInt32(num);\n\t\t\t" +
-    "switch (num_i) //번호등록\n\t\t\t{\n문자열삽입위치\t\t\t\tdefault:\n\t\t\t\t\treturn \"\";\n\t\t\t}\n\t\t}";
+            this.TextBox_Songname.Text = resources.GetString("TextBox_Songname.Text");
             // 
             // TextBox_Request
             // 
