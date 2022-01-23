@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TextBox_VRCUrl.Text" xml:space="preserve">
-    <value>		//퀘스트패치 https://t-ne.x0.to/?url=https://
-		VRCUrl n0 = new VRCUrl("https://www.youtube.com/watch?v=WIM8SfvcrvU");
-		VRCUrl q0 = new VRCUrl("https://t-ne.x0.to/?url=https://www.youtube.com/watch?v=WIM8SfvcrvU");
-문자열삽입위치</value>
-  </data>
   <data name="TextBox_Songname.Text" xml:space="preserve">
     <value>public string songName(string url)
 {
@@ -130,19 +124,23 @@
                         .Replace("https://youtu.be/", "").Replace("https://youtube.com/watch?v=", "");
                     url = url.Split('?')[0].Split('&amp;')[0];
 
+string name = String.Empty;
+
 switch(url)
 {
 case "WIM8SfvcrvU":
-return "환영합니다! 에케 노래방입니다. Welcome!";
-문자열삽입위치
-default:
-return String.Empty;
+name = "환영합니다! 에케 노래방입니다. Welcome!";
+break;
+문자열삽입위치default:
+        name = "URL 재생중입니다! Custom URL Playing!";
+break;
 }
-        return "환영합니다! 에케 노래방입니다! Welcome!";
+Debug.Log($"에케 디버그: songName: {url}: {name}");
+        return name;
 }</value>
   </data>
   <data name="TextBox_Request.Text" xml:space="preserve">
-    <value>    public string Request(string play_n)
+    <value>    public void Request(string play_n)
     {
         switch (play_n) //번호등록
         {
@@ -158,10 +156,7 @@ return String.Empty;
                 break;
         }
         Debug.Log("에케 디버그: Request: 예약완료: " + play_n);
-        if (!_isPlaying || force) _input = "Play";
-        else _input = "Queue";
-        force = false;
-                return "등록되지 않은 URL 입니다. CustomURL";
+        return;
     }</value>
   </data>
 </root>

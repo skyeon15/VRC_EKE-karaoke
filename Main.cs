@@ -51,7 +51,8 @@ namespace EKE_karaoke
                         .Replace("https://youtu.be/", "").Replace("https://youtube.com/watch?v=", "");
                     url = url.Split('?')[0].Split('&')[0];
                     songname += $"case \"{url}\":\n" +
-                        $"return \"[{num}] {name.Replace("_", "")} - {singer}\";\n";
+                        $"name = \"[{num}] {name.Replace("_", "")} - {singer}\";\n" +
+                        $"break;\n";
                 }
             }
             /*

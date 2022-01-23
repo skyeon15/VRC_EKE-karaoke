@@ -43,11 +43,13 @@ namespace EKE_karaoke
             this.TextBox_VRCUrl.Name = "TextBox_VRCUrl";
             this.TextBox_VRCUrl.Size = new System.Drawing.Size(304, 369);
             this.TextBox_VRCUrl.TabIndex = 0;
-            this.TextBox_VRCUrl.Text = resources.GetString("TextBox_VRCUrl.Text");
+            this.TextBox_VRCUrl.Text = "//퀘스트패치 https://t-ne.x0.to/?url=https://\nVRCUrl n0 = new VRCUrl(\"https://youtu.be" +
+    "/WIM8SfvcrvU\");\nVRCUrl q0 = new VRCUrl(\"https://t-ne.x0.to/?url=https://youtu.be" +
+    "/WIM8SfvcrvU\");\n문자열삽입위치";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(361, 12);
+            this.button1.Location = new System.Drawing.Point(348, 7);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 31);
             this.button1.TabIndex = 1;
